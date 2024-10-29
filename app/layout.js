@@ -1,26 +1,26 @@
-import type { Metadata } from "next";
-import {inter} from "@/styles/font";
-import {ThemedHTML} from "@/styles/theme";
+import {hammersmith} from "@/styles/font";
+import {AuthContextProvider} from "@/common/context/authentication";
+import {Header} from "@/common/components/header";
 import "@/styles/globals.css";
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "KPU KMTETI 2024",
-  description: "Welcome! This is the official website of KPU KMTETI 2024",
+  description: "Selamat datang di website KPU KMTETI 2024!",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({children}) {
   return (
-    <ThemedHTML>
-      <body
-        className={`${inter.className} antialiased`}
-      >
-        {/** TODO: @Frontend */}
+    <html>
+    <body
+      className={`${hammersmith.className} antialiased text-text-light`}
+    >
+    <AuthContextProvider>
+      <Header/>
+      <div className="bg-background-dark min-h-screen px-6 py-2">
         {children}
-      </body>
-    </ThemedHTML>
+      </div>
+    </AuthContextProvider>
+    </body>
+    </html>
   );
 }

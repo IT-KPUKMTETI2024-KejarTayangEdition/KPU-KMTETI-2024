@@ -22,11 +22,11 @@ export function Footer() {
                     </div>
                 </div>
             </div>
-            <div className={`text-secondary-purple mt-2 flex justify-center items-center h-auto `}>
-                <h1 className={`${eightbitwonder.className} mr-1`}>
+            <div className={`text-secondary-purple mt-2 flex h-auto justify-center items-center `}>
+                <h1 className={`${pixelgamer.className} mr-1 mt-1 text-2xl`}>
                     &copy;
                 </h1>
-                <h1 className={`${pixelgamer.className}`}>
+                <h1 className={`${pixelgamer.className} flex mt-1 text-xl`}>
                     IT KEJARTAYANG
                 </h1>
                 <h1 className={`${eightbitwonder.className} ml-1`}>

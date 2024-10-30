@@ -1,6 +1,7 @@
 import {hammersmith} from "@/styles/font";
 import {AuthContextProvider} from "@/common/context/authentication";
 import {Header} from "@/common/components/header";
+import { Footer } from "@/common/components/footer";
 import "@/styles/globals.css";
 
 export const metadata = {
@@ -19,6 +20,7 @@ export default function RootLayout({children}) {
       <div className="bg-background-dark min-h-screen px-6 py-2">
         {children}
       </div>
+      <Footer />
     </AuthContextProvider>
     </body>
     </html>

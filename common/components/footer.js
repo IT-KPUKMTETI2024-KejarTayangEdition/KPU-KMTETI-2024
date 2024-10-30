@@ -10,7 +10,7 @@ export function Footer() {
                 {/* Information */}
                 <div className="sm:w-3/5 w-full">
                     <h1 className={`${pixelgamer.className} sm:mb-2 text-xl`}>LAPORKAN SEGALA BENTUK KECURANGAN</h1>
-                    <p className={`${hammersmith.className} text-justify sm:pr-36 text-sm`}>Kecurangan terkait pemilu telah diatur dalam ketentuan KPU KMTETI. Jika anda menemukan adanya kecurangan dalam bentuk apapun, silahkan melapor dengan mengakses <Link className="underline" href="#">laporkan!</Link></p>
+                    <p className={`${hammersmith.className} text-justify sm:pr-32 text-sm`}>Kecurangan terkait pemilu telah diatur dalam ketentuan KPU KMTETI. Jika anda menemukan adanya kecurangan dalam bentuk apapun, silahkan melapor dengan mengakses <Link className="underline" href="#">laporkan!</Link></p>
                 </div>
                 {/* Social Media */}
                 <div className="sm:w-2/5 mt-4 sm:mt-0 w-full">

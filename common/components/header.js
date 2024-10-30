@@ -4,6 +4,8 @@ import Link from "next/link";
 import {UserAuth} from "@/common/context/authentication";
 import {usePathname} from "next/navigation";
 import Image from "next/image";
+import { TetrocracyLogo, HamburgerButton, SimpleLogo } from "../constant/images";
+import { pixelgamer } from "@/styles/font";
 
 export function Header() {
   const {googleLogin, logout, user} = UserAuth();
@@ -23,14 +25,17 @@ export function Header() {
 
   return (
     <header className="sticky top-0 bg-primary-light pb-3">
-      <nav className="bg-secondary-purple flex justify-between px-4 pt-4 pb-3">
-        <Link href="/" className="flex items-center">
-          <h1>TECHNOCRACY</h1>
-        </Link>
-        <div className="hidden lg:flex gap-x-10 text-xl items-center">
-          <Link href="/about" className={path.includes("/about") ? "text-primary-light" : ""}>About Us</Link>
-          <Link href="/kandidat" className={path.includes("/kandidat") ? "text-primary-light" : ""}>Kandidat</Link>
-          <Link href="/tata-cara" className={path.includes("/tata-cara") ? "text-primary-light" : ""}>Tata Cara</Link>
+      <nav className="bg-secondary-purple h-auto flex lg:justify-between px-4 pt-4 pb-3">
+        <div className="lg:w-3/5 md:w-2/5 sm:1/6 flex w-3/4 justify-start items-center">
+          {/* Logo Technocracy */}
+          <SimpleLogo className="sm:hidden "/>
+          <TetrocracyLogo className="sm:w-64 hidden sm:block sm:ml-12" />
+        </div>
+        <div className={`lg:w-2/5 md:w-3/5 sm:w-5/6 hidden sm:flex  h-auto justify-evenly items-center ${pixelgamer.className}`}>
+          {/* Menu */}
+          <Link href="/about" className={`${path.includes("/about") ? "text-primary-light" : ""} hover:-translate-y-1 transform duration-300`}>About Us</Link>
+          <Link href="/kandidat" className={`${path.includes("/kandidat") ? "text-primary-light" : ""} hover:-translate-y-1 transform duration-300`}>Kandidat</Link>
+          <Link href="/tata-cara" className={`${path.includes("/tata-cara") ? "text-primary-light" : ""} hover:-translate-y-1 transform duration-300`}>Tata Cara</Link>
           {user ? (
             <Image
               src={user.photoURL}
@@ -48,8 +53,10 @@ export function Header() {
             >LOGIN</button>
           )}
         </div>
-        <div className="lg:hidden">
-          {/** TODO: Hamburger menu for smaller width device */}
+        <div className="sm:hidden flex justify-end h-auto w-1/4">
+          <button>
+            <HamburgerButton className="text-white" />
+          </button>
         </div>
       </nav>
     </header>

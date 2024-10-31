@@ -4,38 +4,48 @@ import Link from "next/link";
 import {UserAuth} from "@/common/context/authentication";
 import {usePathname} from "next/navigation";
 import Image from "next/image";
-import { TetrocracyLogo, HamburgerButton, SimpleLogo } from "../constant/images";
-import { pixelgamer } from "@/styles/font";
+import {useState} from "react";
+import {TetrocracyLogo, HamburgerButton, SimpleLogo} from "../constant/images";
+import {pixelgamer} from "@/styles/font";
 
 export function Header() {
   const {googleLogin, logout, user} = UserAuth();
   const path = usePathname();
+  const [menuOpen, setMenuOpen] = useState(false);
 
   async function handleSignIn() {
     try {
       await googleLogin();
-    } catch {}
+    } catch {
+    }
   }
 
   async function handleLogout() {
     try {
       await logout();
-    } catch {}
+    } catch {
+    }
   }
 
   return (
-    <header className="sticky top-0 bg-primary-light pb-3">
+    <header className={`sticky top-0 bg-primary-light pb-3 tracking-wider ${pixelgamer.className}`}>
       <nav className="bg-secondary-purple h-auto flex lg:justify-between px-4 pt-4 pb-3">
         <div className="lg:w-3/5 md:w-2/5 sm:1/6 flex w-3/4 justify-start items-center">
           {/* Logo Technocracy */}
           <SimpleLogo className="sm:hidden "/>
           <Link href="/"><TetrocracyLogo className="sm:w-64 hidden sm:block sm:ml-12" /></Link>
         </div>
-        <div className={`lg:w-2/5 md:w-3/5 sm:w-5/6 hidden sm:flex  h-auto justify-evenly items-center ${pixelgamer.className}`}>
+        <div
+          className="lg:w-2/5 md:w-3/5 sm:w-5/6 hidden md:flex  h-auto justify-evenly items-center">
           {/* Menu */}
-          <Link href="/about" className={`${path.includes("/about") ? "text-primary-light" : ""} hover:-translate-y-1 transform duration-300`}>About Us</Link>
-          <Link href="/kandidat" className={`${path.includes("/kandidat") ? "text-primary-light" : ""} hover:-translate-y-1 transform duration-300`}>Kandidat</Link>
-          <Link href="/tata-cara" className={`${path.includes("/tata-cara") ? "text-primary-light" : ""} hover:-translate-y-1 transform duration-300`}>Tata Cara</Link>
+          <Link href="/about"
+                className={`${path.includes("/about") ? "text-primary-light" : ""} hover:-translate-y-1 transform duration-300`}>About
+            Us</Link>
+          <Link href="/kandidat"
+                className={`${path.includes("/kandidat") ? "text-primary-light" : ""} hover:-translate-y-1 transform duration-300`}>Kandidat</Link>
+          <Link href="/tata-cara"
+                className={`${path.includes("/tata-cara") ? "text-primary-light" : ""} hover:-translate-y-1 transform duration-300`}>Tata
+            Cara</Link>
           {user ? (
             <Image
               src={user.photoURL}
@@ -53,10 +63,32 @@ export function Header() {
             >LOGIN</button>
           )}
         </div>
-        <div className="sm:hidden flex justify-end h-auto w-1/4">
-          <button>
-            <HamburgerButton className="text-white" />
+        <div className="md:hidden flex justify-end h-auto w-1/4">
+          <button onClick={() => {
+            setMenuOpen(!menuOpen)
+          }} className="z-30">
+            <HamburgerButton className="text-white"/>
           </button>
+            <div className={`${menuOpen ? "animate-fly-in" : "transform translate-x-full duration-300 overflow-x-hidden"} flex flex-col gap-y-12 pt-20 text-xl text-right px-5 absolute h-screen overflow-hidden left-0 sm:left-1/2 top-0 right-0 bottom-0 bg-secondary-purple`}>
+              <Link href="/" onClick={() => setMenuOpen(false)}
+                    className={path === "/" ? "text-primary-light" : ""}>
+                Beranda
+              </Link>
+              <Link href="/about" onClick={() => setMenuOpen(false)}
+                    className={path.includes("/about") ? "text-primary-light" : ""}>About
+                Us</Link>
+              <Link href="/kandidat" onClick={() => setMenuOpen(false)}
+                    className={path.includes("/kandidat") ? "text-primary-light" : ""}>Kandidat</Link>
+              <Link href="/tata-cara" onClick={() => setMenuOpen(false)}
+                    className={path.includes("/tata-cara") ? "text-primary-light" : ""}>Tata
+                Cara</Link>
+              {!user && (
+                <button
+                  className="block text-text-dark text-3xl bg-primary-dark px-2 py-1 w-3/4 h-16 mx-auto rounded-lg hover:bg-primary-light hover:scale-105 duration-200"
+                  onClick={handleSignIn}
+                >LOGIN</button>
+              )}
+            </div>
         </div>
         
       </nav>

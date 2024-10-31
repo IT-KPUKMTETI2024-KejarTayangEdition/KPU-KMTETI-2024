@@ -13,7 +13,7 @@ export default function RootLayout({children}) {
   return (
     <html>
     <body
-      className={`${hammersmith.className} antialiased text-text-light`}
+      className={`${hammersmith.className} antialiased text-text-light overflow-x-hidden w-full`}
     >
     <AuthContextProvider>
       <Header/>

@@ -17,6 +17,15 @@ module.exports = {
         "text-light": "rgb(252 252 252)",
         "text-dark": "rgb(29 29 33)"
       },
+      keyframes: {
+        "fly-lr": {
+          from: { transform: "translateX(100%)" },
+          to: { transform: "translateX(0)" },
+        },
+      },
+      animation: {
+        "fly-in": "fly-lr 0.3s ease-in-out",
+      },
     },
   },
   plugins: [],

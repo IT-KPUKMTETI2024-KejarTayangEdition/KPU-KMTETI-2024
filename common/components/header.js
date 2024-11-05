@@ -31,7 +31,7 @@ export function Header() {
       <nav className="bg-secondary-purple h-auto flex lg:justify-between px-4 pt-4 pb-3">
         <div className="lg:w-3/5 md:w-2/5 sm:1/6 flex w-3/4 justify-start items-center">
           {/* Logo Technocracy */}
-          <SimpleLogo className="sm:hidden "/>
+          <Link href="/"><SimpleLogo className="sm:hidden "/></Link>
           <Link href="/"><TetrocracyLogo className="sm:w-64 hidden sm:block sm:ml-12" /></Link>
         </div>
         <div

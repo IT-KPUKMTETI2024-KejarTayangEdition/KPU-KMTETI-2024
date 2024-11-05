@@ -12,7 +12,6 @@ export function Header() {
   const {googleLogin, logout, user} = UserAuth();
   const path = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
-
   async function handleSignIn() {
     try {
       await googleLogin();
@@ -90,7 +89,6 @@ export function Header() {
               )}
             </div>
         </div>
-        
       </nav>
     </header>
   )

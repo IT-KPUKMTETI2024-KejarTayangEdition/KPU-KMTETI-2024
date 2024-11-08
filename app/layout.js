@@ -13,11 +13,11 @@ export default function RootLayout({children}) {
   return (
     <html>
     <body
-      className={`${hammersmith.className} antialiased text-text-light overflow-x-hidden w-full`}
+      className={`${hammersmith.className} antialiased bg-background-dark text-text-light overflow-x-hidden w-full`}
     >
     <AuthContextProvider>
       <Header/>
-      <div className="bg-background-dark min-h-screen px-6 py-2">
+      <div className="bg-main-pattern bg-contain w-full border-spacing-0 min-h-screen">
         {children}
       </div>
       <Footer />

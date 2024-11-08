@@ -8,6 +8,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'main-pattern' : "url('../common/constant/background-pattern.svg')"
+      },
       colors: {
         "primary-light": "rgb(253 214 166)",
         "primary-dark": "rgb(245 180 107)",

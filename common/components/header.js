@@ -27,7 +27,7 @@ export function Header() {
   }
 
   return (
-    <header className={`sticky top-0 bg-primary-light pb-3 tracking-wider ${pixelgamer.className}`}>
+    <header className={`sticky top-0 bg-primary-light pb-3 tracking-wider ${pixelgamer.className} z-50`}>
       <nav className="bg-secondary-purple h-auto flex lg:justify-between px-4 pt-4 pb-3">
         <div className="lg:w-3/5 md:w-2/5 sm:1/6 flex w-3/4 justify-start items-center">
           {/* Logo Technocracy */}

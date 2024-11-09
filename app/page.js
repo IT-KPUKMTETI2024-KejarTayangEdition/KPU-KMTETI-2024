@@ -8,9 +8,7 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Section 1 */}
-      <div className="w-full min-h-screen">
-        
-      </div>
+      <div className="flex w-full min-h-screen"></div>
       
       {/* Section 2 */}
       <div className="w-full min-h-screen flex flex-col">
@@ -21,9 +19,7 @@ export default function Home() {
       </div>
 
       {/* Section 3 */}
-      <div className="w-full min-h-screen">
-        
-      </div>
+      <div className="w-full min-h-screen"></div>
     </div>
   );
 }

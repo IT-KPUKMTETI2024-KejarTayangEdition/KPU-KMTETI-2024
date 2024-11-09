@@ -9,7 +9,9 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'main-pattern' : "url('../common/constant/background-pattern.svg')"
+        'main-pattern' : "url('../common/constant/background-pattern.svg')",
+        'landing-top' : "url(../common/constant/landing-page/top.svg)",
+        'landing-bottom' : "url(../common/constant/landing-page/bottom.svg)"
       },
       colors: {
         "primary-light": "rgb(253 214 166)",

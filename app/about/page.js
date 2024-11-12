@@ -5,7 +5,7 @@ import CardView from "@/common/components/card-view";
 import {dalekpinpoint} from "@/styles/font";
 
 export default function About() {
-  const preventImageDrag = {'userDrag' : 'none', '-webkit-user-drag' : 'none'}
+  const preventImageDrag = {'userDrag' : 'none', 'WebkitUserDrag' : 'none'}
   const text = {
     section1 : "Pemilihan Umum Keluarga Mahasiswa Teknik Elektro dan Teknologi Informasi Fakultas Teknik Universitas Gadjah Mada adalah sarana pelaksanaan kedaulatan mahasiswa berdasarkan Anggaran Dasar dan Anggaran Rumah Tangga Keluarga Mahasiswa Teknik Elektro dan Teknologi Informasi Fakultas Teknik Universitas Gadjah Mada.",
     section2 : `Komisi Pemilihan Umum Keluarga Mahasiswa Teknik Elektro dan Teknologi Informasi, Fakultas Teknik, Universitas Gadjah Mada yang selanjutnya disebut KPU adalah suatu komisi yang menyelenggarakan pemilu berdasarkan Undang-Undang Pemilu. Pada tahun ini KPU KMTETI mengusung tema TEchnocracy. TEchnocracy sendiri memiliki arti “Navigating TETI’s Road to A New Leader” merupakan akronim dari technology dan democracy. TECHNOCRACY menggabungkan inovasi teknologi dan semangat demokrasi yang diwujudkan dalam Pemilihan Ketua KMTETI yang dijalankan secara adil, transparan, dan penuh integritas. Melalui TECHNOCRACY, diharapkan dapat terpilih Ketua KMTETI 2025 yang mampu berdiri di garis depan perubahan dan membawa KMTETI menuju masa depan yang lebih baik dengan semangat keadilan.`,

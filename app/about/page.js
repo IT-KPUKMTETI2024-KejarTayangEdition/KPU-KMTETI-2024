@@ -34,24 +34,24 @@ export default function About() {
       {/* Section 1 */}
       <div className="w-full flex flex-col justify-between min-h-screen">
         <div className="mt-24 flex flex-col items-center justify-evenly">
-          <div className={`mb-4 md:mb-10 flex flex-col items-center ${dalekpinpoint.className} text-primary-light text-2xl md:text-4xl`}>
+          <div className={`mb-4 md:mb-10 flex flex-col items-center ${dalekpinpoint.className} text-primary-light text-2xl md:text-3xl`}>
             <h1>PEMILIHAN UMUM</h1>
             <h1>KMTETI 2024</h1>
           </div>
-          <CardView className="w-4/5 text-sm md:text-md text-center" text={text.section1} />
+          <CardView pad="p-4 lg:py-12 lg:px-6" className="w-5/6 md:w-4/6 text-sm md:text-base text-center" text={text.section1} />
         </div>
         <Image style={preventImageDrag} src={imgPattern} />
       </div>
 
       {/* Section 2 */}
       <div className="w-full flex flex-col justify-between min-h-screen">
-        <Image className="transform rotate-180 -mt-[0.5px]" style={preventImageDrag} src={imgPattern} />
+        <Image className="transform rotate-180 mobile-s:-mt-[0.3437px]" style={preventImageDrag} src={imgPattern} />
         <div className="flex flex-col items-center justify-evenly">
-          <div className={`mb-4 md:mb-10 flex flex-col items-center ${dalekpinpoint.className} text-primary-light text-2xl md:text-4xl`}>
+          <div className={`mb-4 md:mb-10 flex flex-col items-center ${dalekpinpoint.className} text-primary-light text-2xl md:text-3xl`}>
             <h1>KOMISI PEMILIHAN UMUM</h1>
             <h1>KMTETI 2024</h1>
           </div>
-          <CardView className="w-4/5 text-sm md:text-md text-center" text={text.section2} />
+          <CardView pad="py-8 px-4" className="w-4/6 text-base  text-center" text={text.section2} />
         </div>
         <Image style={preventImageDrag} src={imgPattern} />
       </div>
@@ -60,11 +60,11 @@ export default function About() {
       <div className="w-full flex flex-col justify-between min-h-screen">
         <Image className="transform rotate-180 -mt-[0.5px]" style={preventImageDrag} src={imgPattern} />
         <div className="flex flex-col items-center justify-evenly">
-          <div className={`mb-4 md:mb-10 flex flex-col items-center ${dalekpinpoint.className} text-primary-light text-2xl md:text-4xl`}>
+          <div className={`mb-4 md:mb-10 flex flex-col items-center ${dalekpinpoint.className} text-primary-light text-2xl md:text-3xl`}>
             <h1>TUGAS DAN WEWENANG</h1>
             <h1>KPU KMTETI</h1>
           </div>
-          <CardView className="w-4/5 text-sm md:text-md text-left" text={text.section3} />
+          <CardView pad="py-4 px-4" className="w-4/6 text-base text-left" text={text.section3} />
         </div>
         <Image style={preventImageDrag} src={imgPattern} />
       </div>

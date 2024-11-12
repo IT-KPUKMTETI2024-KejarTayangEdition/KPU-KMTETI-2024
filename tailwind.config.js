@@ -31,6 +31,13 @@ module.exports = {
       animation: {
         "fly-in": "fly-lr 0.3s ease-in-out",
       },
+      screens: {
+        'mobile-s' : '320px',
+        'mobile-m' : '375px',
+        'mobile-l' : '420px',
+        'tablet' : '768px',
+        'laptop' : '1024px'
+      }
     },
   },
   plugins: [],

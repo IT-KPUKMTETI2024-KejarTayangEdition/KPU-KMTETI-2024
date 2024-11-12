@@ -4,7 +4,14 @@ import imgTop from "../common/constant/landing-page/top.svg"
 import imgBottom from "../common/constant/landing-page/bottom.svg"
 
 export default function Home() {
-  const preventImageDrag = {'user-drag' : 'none', '-webkit-user-drag' : 'none'}
+  const preventImageDrag = {'userDrag' : 'none',
+    'WebkitUserDrag' : 'none',
+    'MozUserSelect' : 'none',
+    'WebkitUserSelect' : 'none',
+    'MsUserSelect' : 'none',
+    'userSelect' : 'none'
+  }
+  
   return (
     <div className="flex flex-col">
       {/* Section 1 */}

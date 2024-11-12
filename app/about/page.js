@@ -45,7 +45,7 @@ export default function About() {
 
       {/* Section 2 */}
       <div className="w-full flex flex-col justify-between min-h-screen">
-        <Image className="transform rotate-180 mobile-s:-mt-[0.3437px]" style={preventImageDrag} src={imgPattern} />
+        <Image className="transform rotate-180 mobile-s:-mt-[0.33px] mobile-m:-mt-[0.35px]" style={preventImageDrag} src={imgPattern} />
         <div className="flex flex-col items-center justify-evenly">
           <div className={`mb-4 md:mb-10 flex flex-col items-center ${dalekpinpoint.className} text-primary-light text-2xl md:text-3xl`}>
             <h1>KOMISI PEMILIHAN UMUM</h1>
@@ -58,7 +58,7 @@ export default function About() {
 
       {/* Section 3 */}
       <div className="w-full flex flex-col justify-between min-h-screen">
-        <Image className="transform rotate-180 -mt-[0.5px]" style={preventImageDrag} src={imgPattern} />
+        <Image className="transform rotate-180 mobile-s:-mt-[0.33px] mobile-m:-mt-[0.35px]" style={preventImageDrag} src={imgPattern} />
         <div className="flex flex-col items-center justify-evenly">
           <div className={`mb-4 md:mb-10 flex flex-col items-center ${dalekpinpoint.className} text-primary-light text-2xl md:text-3xl`}>
             <h1>TUGAS DAN WEWENANG</h1>
@@ -71,7 +71,7 @@ export default function About() {
 
       {/* Section 4: Swiper */}
       <div className="w-full flex flex-col justify-between min-h-screen">
-        <Image className="transform rotate-180 -mt-[0.5px]" style={preventImageDrag} src={imgPattern} />
+        <Image className="transform rotate-180 mobile-s:-mt-[0.33px] mobile-m:-mt-[0.35px]" style={preventImageDrag} src={imgPattern} />
         <div className="flex flex-col items-center justify-evenly">
           <div className={`mb-4 md:mb-10 flex flex-col items-center ${dalekpinpoint.className} text-primary-light text-2xl md:text-4xl`}>
             <h1>ORGANIZING COMMITTE</h1>

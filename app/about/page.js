@@ -1,6 +1,7 @@
 import {ComingSoon} from "@/common/components/coming-soon";
 import Image from "next/image";
 import imgPattern from "../../common/constant/about/about-pattern.svg"
+import imgPatternMerge from "../../common/constant/about/about-pattern-merge.svg"
 import CardView from "@/common/components/card-view";
 import {dalekpinpoint} from "@/styles/font";
 
@@ -30,70 +31,46 @@ export default function About() {
   }
   return (
     <div className="flex flex-col w-full">
-      
       {/* Section 1 */}
-      <div className="w-full flex flex-col justify-between h-auto"> 
-        <div className="mt-16 lg:mt-36 flex flex-col items-center justify-center">
-          <div className={`mb-4 md:mb-6 lg:mb-8 flex flex-col items-center ${dalekpinpoint.className} text-primary-light text-2xl md:text-4xl lg:text-5xl`}>
-            <h1>PEMILIHAN UMUM</h1>
-            <h1>KMTETI 2024</h1>
-          </div>
-          <CardView pad="p-4" className="w-5/6 md:w-4/6 lg:w-4/6 text-sm md:text-base lg:text-lg text-center" text={text.section1} />
-        </div>
-        <div className="mt-16 lg:mt-36 w-full flex flex-col-reverse">
-          <Image style={preventImageDrag} src={imgPattern} />
-        </div>
+      <div className="mt-12 lg:mt-24 w-full flex flex-col h-auto justify-center items-center">
+        <div className={`mb-4 md:mb-6 lg:mb-8 flex flex-col items-center ${dalekpinpoint.className} text-primary-light text-2xl md:text-4xl lg:text-5xl`}>
+          <h1>PEMILIHAN UMUM</h1>
+          <h1>KMTETI 2024</h1>
+        </div>  
+        <CardView pad="p-4" className="w-5/6 md:w-4/6 lg:w-4/6 text-sm md:text-base lg:text-lg text-center" text={text.section1} />
       </div>
+      <Image className="mt-12 lg:mt-24" style={preventImageDrag} src={imgPatternMerge} />
 
       {/* Section 2 */}
-      <div className="w-full flex flex-col h-auto">
-        <div className="mb-16 lg:mb-36">
-          <Image className="transform rotate-180 mobile-s:-mt-[0.33px] mobile-m:-mt-[0.35px]" style={preventImageDrag} src={imgPattern} />
-        </div>
-        <div className="flex flex-col items-center justify-center">
-          <div className={`mb-4 md:mb-6 lg:mb-8 flex flex-col items-center ${dalekpinpoint.className} text-primary-light text-2xl md:text-4xl lg:text-5xl`}>
-            <h1>KOMISI PEMILIHAN UMUM</h1>
-            <h1>KMTETI 2024</h1>
-          </div>
-          <CardView pad="p-4" className="w-5/6 md:w-4/6 lg:w-4/6 text-sm md:text-base lg:text-lg text-center" text={text.section2} />
-        </div>
-        <div className="flex flex-col-reverse mt-16 lg:mt-36">
-          <Image style={preventImageDrag} src={imgPattern} />
-        </div>
+      <div className="mt-12 lg:mt-24 w-full flex flex-col h-auto justify-center items-center">
+        <div className={`mb-4 md:mb-6 lg:mb-8 flex flex-col items-center ${dalekpinpoint.className} text-primary-light text-2xl md:text-4xl lg:text-5xl`}>
+          <h1>PEMILIHAN UMUM</h1>
+          <h1>KMTETI 2024</h1>
+        </div>  
+        <CardView pad="p-4" className="w-5/6 md:w-4/6 lg:w-4/6 text-sm md:text-base lg:text-lg text-center" text={text.section1} />
       </div>
+      <Image className="mt-12 lg:mt-24" style={preventImageDrag} src={imgPatternMerge} />
 
       {/* Section 3 */}
-      <div className="w-full flex flex-col h-auto">
-        <div className="mb-16 lg:mb-36">
-          <Image className="transform rotate-180 mobile-s:-mt-[0.33px] mobile-m:-mt-[0.35px] md:-mt-[0.5px]" style={preventImageDrag} src={imgPattern} />
-        </div>
-        <div className="flex flex-col items-center justify-center">
-          <div className={`mb-4 md:mb-6 lg:mb-8 flex flex-col items-center ${dalekpinpoint.className} text-primary-light text-2xl md:text-4xl lg:text-5xl`}>
-            <h1>TUGAS DAN WEWENANG</h1>
-            <h1>KPU KMTETI 2024</h1>
-          </div>
-          <CardView pad="p-4" className="w-5/6 md:w-4/6 lg:w-4/6 text-sm md:text-base lg:text-lg text-left" text={text.section3} />
-        </div>
-        <div className="flex flex-col-reverse mt-16 lg:mt-36">
-          <Image style={preventImageDrag} src={imgPattern} />
-        </div>
+      <div className="mt-12 lg:mt-24 w-full flex flex-col h-auto justify-center items-center">
+        <div className={`mb-4 md:mb-6 lg:mb-8 flex flex-col items-center ${dalekpinpoint.className} text-primary-light text-2xl md:text-4xl lg:text-5xl`}>
+          <h1>PEMILIHAN UMUM</h1>
+          <h1>KMTETI 2024</h1>
+        </div>  
+        <CardView pad="p-4" className="w-5/6 md:w-4/6 lg:w-4/6 text-sm md:text-base lg:text-lg text-center" text={text.section1} />
       </div>
+      <Image className="mt-12 lg:mt-24" style={preventImageDrag} src={imgPatternMerge} />
 
       {/* Section 4: Swiper */}
-      <div className="w-full flex flex-col h-auto">
-        <div className="mb-16 lg:mb-36">
-          <Image className="transform rotate-180 mobile-s:-mt-[0.33px] mobile-m:-mt-[0.35px] md:-mt-[0.5px]" style={preventImageDrag} src={imgPattern} />
-        </div>
-        <div className="flex flex-col items-center justify-center">
-          <div className={`mb-4 md:mb-6 lg:mb-8 flex flex-col items-center ${dalekpinpoint.className} text-primary-light text-2xl md:text-4xl lg:text-5xl`}>
-            <h1>ORGANIZING COMMITTE</h1>
-            <h1>KPU KMTETI 2024</h1>
-          </div>
-        </div>
-        <div className="flex flex-col-reverse mt-16 lg:mt-36">
-          <Image style={preventImageDrag} src={imgPattern} />
-        </div>
+      <div className="mt-12 lg:mt-24 w-full flex flex-col h-auto justify-center items-center">
+        <div className={`mb-4 md:mb-6 lg:mb-8 flex flex-col items-center ${dalekpinpoint.className} text-primary-light text-2xl md:text-4xl lg:text-5xl`}>
+          <h1>PEMILIHAN UMUM</h1>
+          <h1>KMTETI 2024</h1>
+        </div>  
+        <CardView pad="p-4" className="w-5/6 md:w-4/6 lg:w-4/6 text-sm md:text-base lg:text-lg text-center" text={text.section1} />
       </div>
+
+      <Image className="mt-12 lg:mt-24" style={preventImageDrag} src={imgPattern} />
     </div>
   )
 }

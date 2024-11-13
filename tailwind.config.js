@@ -32,7 +32,7 @@ module.exports = {
         "fly-lr": {
           from: { transform: "translateX(100%)" },
           to: { transform: "translateX(0)" },
-        },
+        }
       },
       animation: {
         "fly-in": "fly-lr 0.3s ease-in-out",

@@ -6,5 +6,5 @@ import ph from "./png-ver/ph.png"
 import pr from "./png-ver/pr.png"
 
 export const path = [
-    acara, dmd, it, perkap, ph, pr
+    ph, acara, dmd, it, perkap, pr
 ]

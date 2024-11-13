@@ -6,7 +6,13 @@ import Image from "next/image";
 import { dalekpinpoint } from "@/styles/font";
 
 export default function Kandidat() {
-  const preventImageDrag = {'userDrag' : 'none', 'WebkitUserDrag' : 'none'}
+  const preventImageDrag = {'userDrag' : 'none',
+    'WebkitUserDrag' : 'none',
+    'MozUserSelect' : 'none',
+    'WebkitUserSelect' : 'none',
+    'MsUserSelect' : 'none',
+    'userSelect' : 'none'
+  }
 
   return (
     <div className="flex items-center justify-between bg-gradient-to-b from-primary-light to-primary-dark flex-col w-full">

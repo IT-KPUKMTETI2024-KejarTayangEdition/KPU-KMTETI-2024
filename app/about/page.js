@@ -1,3 +1,5 @@
+'use client';
+
 import {ComingSoon} from "@/common/components/coming-soon";
 import Image from "next/image";
 import imgPattern from "../../common/constant/about/about-pattern.svg"
@@ -5,9 +7,11 @@ import imgPatternMerge from "../../common/constant/about/about-pattern-merge.svg
 import CardView from "@/common/components/card-view";
 import {dalekpinpoint} from "@/styles/font";
 import {text} from "../../common/constant/text"
+import {path} from "../../common/constant/about/committee/path"
+import Slider from "@/common/components/Slider";
 
 export default function About() {
-  
+  const imgSliderPath = "../../common/constant/about/committee/"
   const preventImageDrag = {'userDrag' : 'none',
     'WebkitUserDrag' : 'none',
     'MozUserSelect' : 'none',
@@ -15,7 +19,7 @@ export default function About() {
     'MsUserSelect' : 'none',
     'userSelect' : 'none'
   }
-  
+
   return (
     <div className="flex flex-col w-full">
       {/* Section 1 */}
@@ -53,10 +57,13 @@ export default function About() {
         <div className={`mb-4 md:mb-6 lg:mb-8 flex flex-col items-center ${dalekpinpoint.className} text-primary-light text-2xl md:text-4xl lg:text-5xl`}>
           <h1>{text.aboutPage.section4.title1}</h1>
           <h1>{text.aboutPage.section4.title2}</h1>
-        </div>  
+        </div> 
+        <Slider>
+          {path.map((p, k) => (<div className="w-full h-full border-2 border-white bg-blue-400"></div>))}
+        </Slider>
       </div>
 
-      <Image className="mt-12 lg:mt-24" style={preventImageDrag} src={imgPattern} />
+      <Image className="mt-12 lg:mt-24" style={preventImageDrag}  src={imgPattern} />
     </div>
   )
 }

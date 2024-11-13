@@ -244,3 +244,21 @@ export function InstagramLogo(props) {
         </svg>
     );
 }
+
+export function LeftSliderButton(props) {
+    return (
+        <svg width="54" height="90" viewBox="0 0 54 90" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+        <path d="M41.6505 0V25.6492C38.5914 31.4536 30.2143 43.439 21.1782 44.945C30.2143 46.451 38.5914 58.4363 41.6505 64.2407V89.8899C37.509 59.5815 12.1578 47.2981 -6.20782e-05 44.945C12.1578 42.5918 37.509 30.3084 41.6505 0Z" fill="#381B1D"/>
+        <rect width="15.7632" height="15.7632" transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 53.9431 44.7959)" fill="#381B1D"/>
+        </svg>
+    );
+}
+
+export function RightSliderButton(props) {
+    return (
+        <svg width="54" height="90" viewBox="0 0 54 90" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+        <path d="M12.2363 0V25.6492C15.2954 31.4536 23.6726 43.439 32.7086 44.945C23.6726 46.451 15.2954 58.4363 12.2363 64.2407V89.8899C16.3779 59.5815 41.729 47.2981 53.8869 44.945C41.729 42.5918 16.3779 30.3084 12.2363 0Z" fill="#381B1D"/>
+        <rect y="44.7959" width="15.7632" height="15.7632" transform="rotate(-45 0 44.7959)" fill="#381B1D"/>
+        </svg>
+    );
+}

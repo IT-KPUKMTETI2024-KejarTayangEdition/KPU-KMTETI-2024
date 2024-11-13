@@ -11,7 +11,13 @@ module.exports = {
       backgroundImage: {
         'main-pattern' : "url('../common/constant/background-pattern.svg')",
         'landing-top' : "url(../common/constant/landing-page/top.svg)",
-        'landing-bottom' : "url(../common/constant/landing-page/bottom.svg)"
+        'landing-bottom' : "url(../common/constant/landing-page/bottom.svg)",
+        'committee-acara' : "url(../common/constant/about/committee/acara.svg)",
+        'committee-dmd' : "url(../common/constant/about/committee/dmd.svg)",
+        'committee-it' : "url(../common/constant/about/committee/it.svg)",
+        'committee-perkap' : "url(../common/constant/about/committee/perkap.svg)",
+        'committee-ph' : "url(../common/constant/about/committee/ph.svg)",
+        'committee-pr' : "url(../common/constant/about/committee/pr.svg)",
       },
       colors: {
         "primary-light": "rgb(253 214 166)",

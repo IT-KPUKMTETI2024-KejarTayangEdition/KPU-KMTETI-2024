@@ -11,7 +11,6 @@ import {path} from "../../common/constant/about/committee/path"
 import Slider from "@/common/components/Slider";
 
 export default function About() {
-  const imgSliderPath = "../../common/constant/about/committee/"
   const preventImageDrag = {'userDrag' : 'none',
     'WebkitUserDrag' : 'none',
     'MozUserSelect' : 'none',

@@ -17,7 +17,7 @@ export default function RootLayout({children}) {
     >
     <AuthContextProvider>
       <Header/>
-      <div className="bg-main-pattern bg-contain w-full border-spacing-0 min-h-screen">
+      <div className="bg-main-pattern bg-contain w-full border-spacing-0">
         {children}
       </div>
       <Footer />

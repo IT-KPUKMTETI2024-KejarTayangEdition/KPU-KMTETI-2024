@@ -10,15 +10,15 @@ export default function Kandidat() {
 
   return (
     <div className="flex items-center justify-between bg-gradient-to-b from-primary-light to-primary-dark flex-col w-full">
-      <div className="mt-12 flex md:flex-row flex-col justify-evenly items-center w-full p-4">
+      <div className="mt-8 flex sm:flex-row flex-col justify-evenly items-center w-full p-4">
         <button>
-          <Image className="hover:w-72 md:hover:w-[21rem] lg:hover:w-[27rem] transforms duration-300 w-64 md:w-[20rem] lg:w-[26rem] h-auto" src={calon1} />
+          <Image className="hover:w-72 m-4 md:hover:w-[21rem] lg:hover:w-[27rem] transforms duration-300 w-64 md:w-[20rem] lg:w-[26rem] h-auto" src={calon1} />
         </button>
         <button>
-          <Image className="hover:w-72 md:hover:w-[21rem] lg:hover:w-[27rem] transforms duration-300 w-64 md:w-[20rem] lg:w-[26rem] h-auto " src={calon2}/>
+          <Image className="hover:w-72 m-4 md:hover:w-[21rem] lg:hover:w-[27rem] transforms duration-300 w-64 md:w-[20rem] lg:w-[26rem] h-auto " src={calon2}/>
         </button>
       </div>
-      <Image className="mt-12" style={preventImageDrag} src={imgPattern}  />
+      <Image className="mt-8" style={preventImageDrag} src={imgPattern}  />
     </div>
   )
 }

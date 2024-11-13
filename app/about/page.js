@@ -59,7 +59,9 @@ export default function About() {
           <h1>{text.aboutPage.section4.title2}</h1>
         </div> 
         <Slider>
-          {path.map((p, k) => (<div className="w-full h-full border-2 border-white bg-blue-400"></div>))}
+          {path.map((p, k) => (
+            <Image className="h-40 mobile-m:h-[11rem] mobile-l:h-64 md:h-80 lg:h-92" src={p} />
+            ))}
         </Slider>
       </div>
 

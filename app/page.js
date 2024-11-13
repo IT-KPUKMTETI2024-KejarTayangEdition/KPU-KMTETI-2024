@@ -21,7 +21,7 @@ export default function Home() {
       {/* Section 2 */}
       <div className="w-full min-h-screen flex flex-col">
         <Image src={imgTop} className="" style={preventImageDrag} />
-        <div className="bg-primary-light -mt-[1px] block m-0 w-full min-h-screen">
+        <div className="bg-primary-light w-full min-h-screen">
         </div>
         <Image src={imgBottom} className="" style={preventImageDrag} />
       </div>

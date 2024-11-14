@@ -53,13 +53,17 @@ module.exports = {
           to: {
             transform: "translateX(0)",
             opacity: "1"
-          }
+          },
+        "spin-custom" : {
+          from: {transform: "rotate(0deg)"},
+          to: {transform: "rotate(360deg)"}
         }
       },
       animation: {
         "fly-in": "fly-lr 0.3s ease-in-out",
         "in-slide-r-to-l" : "slide-r-to-l 0.7s ease-in-out",
-        "in-slide-l-to-r" : "slide-l-to-r 0.7s ease-in-out"
+        "in-slide-l-to-r" : "slide-l-to-r 0.7s ease-in-out",
+        "spin-custom-speed" : "spin-custom 4s linear infinite"
       },
       screens: {
         'mobile-s' : '320px',
@@ -68,6 +72,7 @@ module.exports = {
         'mobile-l-tablet' : '594px',
         'tablet' : '768px',
         'laptop' : '1024px'
+      }
       }
     },
   },

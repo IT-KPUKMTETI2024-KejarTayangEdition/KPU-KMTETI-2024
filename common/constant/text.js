@@ -1,5 +1,9 @@
 export const text = {
-    landingPage : {},
+    landingPage : {
+        section3 : {
+            descText : `TECHNOCRACY “Navigating TETI’s Road to A New Leader” merupakan akronim dari technology dan democracy. TECHNOCRACY menggabungkan inovasi teknologi dan semangat demokrasi yang diwujudkan dalam Pemilihan Ketua KMTETI yang dijalankan secara adil, transparan, dan penuh integritas. Melalui TECHNOCRACY, diharapkan dapat terpilih Ketua KMTETI 2025 yang mampu berdiri di garis depan perubahan dan membawa KMTETI menuju masa depan yang lebih baik dengan semangat keadilan. `
+        }
+    },
     aboutPage : {
         section1 : {
             title1 : `PEMILIHAN UMUM`,

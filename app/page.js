@@ -40,7 +40,7 @@ export default function Home() {
       <div className="flex flex-row w-full h-[90vh]">
         <div className="hidden w-1/2 h-full md:flex justify-center items-center p-8">
           <div className="relative flex items-center justify-center w-full h-1/2">
-            <Image data-aos="zoom-in" data-aos-duration="300" src={imgBackgroundLogo} width={350} className="absolute animate-spin-custom-speed" />
+            <Image data-aos="zoom-in" data-aos-duration="500" src={imgBackgroundLogo} width={350} className="absolute animate-spin-custom-speed" />
             <Image data-aos="fade-right" data-aos-duration="500" src={imgLogo} width={450} className="absolute"  />
           </div>
         </div>
@@ -57,7 +57,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <Link href="/"><Image data-aos="zoom-in" data-aos-duration="300" className="mt-6" width={200} src={voteButton} /></Link>
+          <Link href="/"><Image className="mt-6" width={200} src={voteButton} /></Link>
         </div>
       </div>
       {/* Section 2 */}

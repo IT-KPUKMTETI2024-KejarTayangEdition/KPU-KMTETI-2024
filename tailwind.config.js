@@ -54,6 +54,7 @@ module.exports = {
             transform: "translateX(0)",
             opacity: "1"
           },
+        },
         "spin-custom" : {
           from: {transform: "rotate(0deg)"},
           to: {transform: "rotate(360deg)"}
@@ -72,7 +73,6 @@ module.exports = {
         'mobile-l-tablet' : '594px',
         'tablet' : '768px',
         'laptop' : '1024px'
-      }
       }
     },
   },

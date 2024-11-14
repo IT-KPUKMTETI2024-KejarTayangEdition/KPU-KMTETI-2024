@@ -1,3 +1,5 @@
+const { transform } = require('next/dist/build/swc');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -32,10 +34,15 @@ module.exports = {
         "fly-lr": {
           from: { transform: "translateX(100%)" },
           to: { transform: "translateX(0)" },
+        },
+        "spin-custom" : {
+          from: {transform: "rotate(0deg)"},
+          to: {transform: "rotate(360deg)"}
         }
       },
       animation: {
         "fly-in": "fly-lr 0.3s ease-in-out",
+        "spin-custom-speed" : "spin-custom 4s linear infinite"
       },
       screens: {
         'mobile-s' : '320px',

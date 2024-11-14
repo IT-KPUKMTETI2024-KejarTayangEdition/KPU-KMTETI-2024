@@ -36,7 +36,7 @@ export default function About() {
           <h1>{text.aboutPage.section1.title1}</h1>
           <h1>{text.aboutPage.section1.title2}</h1>
         </div>  
-        <CardView pad="p-4" className="w-5/6 md:w-4/6 lg:w-4/6 text-sm md:text-base lg:text-lg text-center" text={text.aboutPage.section1.description} />
+        <CardView pad="p-4" className="w-5/6 md:w-4/6 lg:w-4/6 text-xs md:text-base lg:text-lg text-center" text={text.aboutPage.section1.description} />
       </div>
 
       <Image className="mt-12 lg:mt-24" style={preventImageDrag} src={imgPatternMerge} />
@@ -47,7 +47,7 @@ export default function About() {
           <h1>{text.aboutPage.section2.title1}</h1>
           <h1>{text.aboutPage.section2.title2}</h1>
         </div>  
-        <CardView pad="p-4" className="w-5/6 md:w-4/6 lg:w-4/6 text-sm md:text-base lg:text-lg text-center" text={text.aboutPage.section2.description} />
+        <CardView pad="p-4" className="w-5/6 md:w-4/6 lg:w-4/6 text-xs md:text-base lg:text-lg text-center" text={text.aboutPage.section2.description} />
       </div>
       <Image className="mt-12 lg:mt-24" style={preventImageDrag} src={imgPatternMerge} />
 
@@ -57,7 +57,7 @@ export default function About() {
           <h1>{text.aboutPage.section3.title1}</h1>
           <h1>{text.aboutPage.section3.title2}</h1>
         </div>  
-        <CardView pad="p-4" className="w-5/6 md:w-4/6 lg:w-4/6 text-sm md:text-base lg:text-lg text-left" text={text.aboutPage.section3.description} />
+        <CardView pad="p-4" className="w-5/6 md:w-4/6 lg:w-4/6 text-xs md:text-base lg:text-lg text-left" text={text.aboutPage.section3.description} />
       </div>
       <Image className="mt-12 lg:mt-24" style={preventImageDrag} src={imgPatternMerge} />
 

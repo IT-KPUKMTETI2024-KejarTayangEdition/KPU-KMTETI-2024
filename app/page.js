@@ -13,6 +13,7 @@ import Kandidat2 from "../common/constant/kandidat/calon2.png"
 
 import {text} from '../common/constant/text'
 import CardView from "@/common/components/card-view";
+import voteButton from '../common/constant/landing-page/vote.png'
 import { hammersmith, pixelgamer } from "@/styles/font";
 
 import AOS from 'aos'
@@ -37,35 +38,33 @@ export default function Home() {
     <div className="flex flex-col">
       {/* Section 1 */}
       <div className="flex flex-row w-full h-[90vh]">
-        <div className="w-1/2 h-full flex justify-center items-center p-8">
+        <div className="hidden w-1/2 h-full md:flex justify-center items-center p-8">
           <div className="relative flex items-center justify-center w-full h-1/2">
             <Image data-aos="zoom-in" data-aos-duration="300" src={imgBackgroundLogo} width={350} className="absolute animate-spin-custom-speed" />
             <Image data-aos="fade-right" data-aos-duration="500" src={imgLogo} width={450} className="absolute"  />
           </div>
         </div>
-        <div className="w-1/2 h-full flex flex-col items-center justify-center">
+        <div className="w-full md:w-1/2 h-full flex flex-col items-center justify-center">
           <div data-aos="fade-left" data-aos-duration="500" className="p-4 rounded-2xl w-[80%] h-[40%] bg-gradient-to-b from-primary-light to-primary-dark">
             <div className="w-full h-full border border-secondary-darkred rounded-xl p-4">
               <div className={`${pixelgamer.className} flex items-center w-full h-1/2 justify-evenly`}>
                 {/* Upper text */}
-                <h1 className="text-6xl text-primary-light " style={{'WebkitTextStroke' : '4px #251205'}}>TETI</h1>
-                <h1 className="text-3xl text-secondary-darkred w-2/4">ROAD TO A NEW CAPTAIN</h1>
+                <h1 className="text-6xl text-primary-light " style={{'WebkitTextStroke' : '2px #251205'}}>TETI</h1>
+                <h1 className="text-2xl lg:text-3xl text-secondary-darkred w-2/4">ROAD TO A NEW CAPTAIN</h1>
               </div>
-              <div className="text-center text-secondary-darkred">
+              <div className={`${hammersmith.className} text-base mt-2 md:mt-0 text-center text-secondary-darkred`}>
                 <p>Suaramu adalah kunci kemajuan KMTETI, gunakan hak pilihmu</p>
               </div>
             </div>
           </div>
-          <div>
-            Vote Now
-          </div>
+          <Link href="/"><Image data-aos="zoom-in" data-aos-duration="300" className="mt-6" width={200} src={voteButton} /></Link>
         </div>
       </div>
       {/* Section 2 */}
       <div className="w-full min-h-screen flex flex-col">
         <Image src={imgTop} className="" style={preventImageDrag} />
         <div className="bg-primary-light flex flex-col items-center justify-evenly w-full h-[100vh]">
-          <h1 data-aos="zoom-in" className={`${pixelgamer.className} text-6xl text-secondary-darkred`}>WHO'S NEXT ?</h1>
+          <h1 data-aos="zoom-in" className={`${pixelgamer.className} text-4xl md:text-6xl text-secondary-darkred`}>WHO'S NEXT ?</h1>
           <div className="flex w-full flex-row items-center justify-evenly">
             <div className="flex flex-col items-center">
               <Image data-aos="fade-right" width={300} src={Kandidat1} />
@@ -81,9 +80,10 @@ export default function Home() {
       </div>
 
       {/* Section 3 */}
-      <div data-aos="fade-right" data-aos-duration="700" className="w-full flex flex-col justify-center items-center h-[80vh]">
-        <CardView pad="p-8" className="w-1/2 text-justify" text={text.landingPage.section3.descText} />
-        <Link href="/about"><button className={`${pixelgamer.className} text-secondary-darkred mt-4 p-4 bg-primary-dark hover:bg-primary-light duration-300 transform hover:-translate-y-1 rounded-lg`}>About Us</button></Link>
+      <div data-aos="fade-right" data-aos-duration="700" className="w-full flex flex-col justify-center items-center mt-12">
+        <CardView pad="p-8" className="sm:w-1/2 md:w-[80%] w-[85
+        %] text-justify" text={text.landingPage.section3.descText} />
+        <Link href="/about"><button className={`${pixelgamer.className} text-secondary-darkred mt-4 p-4 bg-primary-dark mb-12 hover:bg-primary-light duration-300 transform hover:-translate-y-1 rounded-lg`}>About Us</button></Link>
       </div>
     </div>
   );

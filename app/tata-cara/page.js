@@ -36,7 +36,6 @@ export default function TataCara() {
       </div>
       </main>
 
-      
 
       <Image alt="" className="mt-8 justify justify-center" style={preventImageDrag} src={imgPattern}  />
     </div>

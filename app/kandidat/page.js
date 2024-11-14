@@ -24,10 +24,10 @@ export default function Kandidat() {
   return (
     <div className="flex items-center justify-between bg-gradient-to-b from-primary-light to-primary-dark flex-col w-full">
       <div className="mt-8 flex sm:flex-row flex-col justify-evenly items-center w-full p-4">
-        <button onClick={() => setOpen1(true)}>
+        <button className="animate-in-slide-l-to-r" onClick={() => setOpen1(true)}>
           <Image loading="eager" priority={true} className="hover:-translate-y-4 m-4 transforms duration-300 w-64 md:w-[20rem] lg:w-[24rem] h-auto" src={calon1} />
         </button>
-        <button onClick={() => setOpen2(true)}>
+        <button className="animate-in-slide-r-to-l" onClick={() => setOpen2(true)}>
           <Image loading="eager" priority={true} className="hover:-translate-y-4 m-4 transforms duration-300 w-64 md:w-[20rem] lg:w-[24rem] h-auto " src={calon2}/>
         </button>
         <Modal open={open1} onClose={() => setOpen1(false)} srcImg={{cv : calon1}}>

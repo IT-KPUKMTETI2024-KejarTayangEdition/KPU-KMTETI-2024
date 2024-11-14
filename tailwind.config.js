@@ -1,3 +1,5 @@
+const { transform } = require('next/dist/build/swc');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -32,10 +34,32 @@ module.exports = {
         "fly-lr": {
           from: { transform: "translateX(100%)" },
           to: { transform: "translateX(0)" },
+        },
+        "slide-r-to-l" : {
+          from: {
+            transform: "translateX(100%)",
+            opacity: "0"
+          },
+          to: {
+            transform: "translateX(0)",
+            opacity: "1"
+          }
+        },
+        "slide-l-to-r" : {
+          from: {
+            transform: "translateX(-100%)",
+            opacity: "0"
+          },
+          to: {
+            transform: "translateX(0)",
+            opacity: "1"
+          }
         }
       },
       animation: {
         "fly-in": "fly-lr 0.3s ease-in-out",
+        "in-slide-r-to-l" : "slide-r-to-l 0.7s ease-in-out",
+        "in-slide-l-to-r" : "slide-l-to-r 0.7s ease-in-out"
       },
       screens: {
         'mobile-s' : '320px',

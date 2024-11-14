@@ -21,7 +21,7 @@ function Information({srcImg, text, info}) {
     } else if (info.orasi) {
         pages = <div className="w-[70%] flex flex-col items-center justify-center p-4 h-3/4 text-justify">
         <h1>Video orasi dapat dilihat melalui link dibawah ini </h1>
-        <button className={`${pixelgamer.className} text-secondary-darkred mt-6 bg-primary-light hover:bg-primary-dark pt-2 pb-2 pl-6 pr-6 hover:-translate-y-2 transform duration-300 rounded-lg`}>Lihat CV</button>
+        <button className={`${pixelgamer.className} text-secondary-darkred mt-6 bg-primary-light hover:bg-primary-dark pt-2 pb-2 pl-6 pr-6 hover:-translate-y-2 transform duration-300 rounded-lg`}>Lihat Orasi</button>
         </div>
     }
     

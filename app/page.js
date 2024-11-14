@@ -40,8 +40,8 @@ export default function Home() {
       <div className="flex flex-row w-full h-[90vh]">
         <div className="hidden w-1/2 h-full md:flex justify-center items-center p-8">
           <div className="relative flex items-center justify-center w-full h-1/2">
-            <Image data-aos="zoom-in" data-aos-duration="500" src={imgBackgroundLogo} width={350} className="absolute animate-spin-custom-speed" />
-            <Image data-aos="fade-right" data-aos-duration="500" src={imgLogo} width={450} className="absolute"  />
+            <Image alt="" data-aos="zoom-in" data-aos-duration="500" src={imgBackgroundLogo} width={350} className="absolute animate-spin-custom-speed" />
+            <Image alt="" data-aos="fade-right" data-aos-duration="500" src={imgLogo} width={450} className="absolute"  />
           </div>
         </div>
         <div className="w-full md:w-1/2 h-full flex flex-col items-center justify-center">
@@ -57,26 +57,26 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <Link href="/"><Image data-aos="fade-left" data-aos-duration="700" className="mt-6" width={200} src={voteButton} /></Link>
+          <Link href="/"><Image alt="" data-aos="fade-left" data-aos-duration="700" className="mt-6" width={200} src={voteButton} /></Link>
         </div>
       </div>
       {/* Section 2 */}
       <div className="w-full min-h-screen flex flex-col">
-        <Image src={imgTop} className="" style={preventImageDrag} />
+        <Image alt="" src={imgTop} className="" style={preventImageDrag} />
         <div className="bg-primary-light flex flex-col items-center justify-evenly w-full h-[100vh]">
           <h1 data-aos="zoom-in" className={`${pixelgamer.className} text-4xl md:text-6xl text-secondary-darkred`}>WHO'S NEXT ?</h1>
           <div className="flex w-full flex-row items-center justify-evenly">
             <div className="flex flex-col items-center">
-              <Image data-aos="fade-right" width={300} src={Kandidat1} />
+              <Image alt="" data-aos="fade-right" width={300} src={Kandidat1} />
               <button className={`border-2 border-secondary-darkred rounded-md text-secondary-darkred hover:bg-secondary-darkred hover:text-primary-light transform duration-500 hover:-translate-y-1 ${pixelgamer.className} py-2 px-6`} >Next</button>
             </div>
             <div className="flex flex-col items-center">
-              <Image data-aos="fade-left" width={300} src={Kandidat2} />
+              <Image alt="" data-aos="fade-left" width={300} src={Kandidat2} />
               <button className={`border-2 border-secondary-darkred rounded-md text-secondary-darkred hover:bg-secondary-darkred hover:text-primary-light transform duration-500 hover:-translate-y-1 ${pixelgamer.className} py-2 px-6`} >Next</button>
             </div>
           </div>
         </div>
-        <Image src={imgBottom} className="" style={preventImageDrag} />
+        <Image alt="" src={imgBottom} className="" style={preventImageDrag} />
       </div>
 
       {/* Section 3 */}

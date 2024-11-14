@@ -57,7 +57,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <Link href="/"><Image className="mt-6" width={200} src={voteButton} /></Link>
+          <Link href="/"><Image data-aos="fade-left" data-aos-duration="700" className="mt-6" width={200} src={voteButton} /></Link>
         </div>
       </div>
       {/* Section 2 */}

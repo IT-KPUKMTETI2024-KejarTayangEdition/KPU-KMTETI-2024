@@ -45,14 +45,14 @@ export default function Home() {
           </div>
         </div>
         <div className="w-full md:w-1/2 h-full flex flex-col items-center justify-center">
-          <div data-aos="fade-left" data-aos-duration="500" className="p-4 rounded-2xl w-[80%] h-[40%] bg-gradient-to-b from-primary-light to-primary-dark">
+          <div data-aos="fade-left" data-aos-duration="500" className="p-4 rounded-2xl w-[80%] md:h-[40%] bg-gradient-to-b from-primary-light to-primary-dark">
             <div className="w-full h-full border border-secondary-darkred rounded-xl p-4">
-              <div className={`${pixelgamer.className} flex items-center w-full h-1/2 justify-evenly`}>
+              <div className={`${pixelgamer.className} flex flex-col md:flex-row items-center w-full md:h-1/2 justify-evenly`}>
                 {/* Upper text */}
-                <h1 className="text-6xl text-primary-light " style={{'WebkitTextStroke' : '2px #251205'}}>TETI</h1>
-                <h1 className="text-2xl lg:text-3xl text-secondary-darkred w-2/4">ROAD TO A NEW CAPTAIN</h1>
+                <h1 className="text-4xl md:text-6xl text-primary-light " style={{'WebkitTextStroke' : '2px #251205'}}>TETI</h1>
+                <h1 className="text-lg lg:text-3xl text-secondary-darkred text-center md:text-left md:w-2/4">ROAD TO A NEW CAPTAIN</h1>
               </div>
-              <div className={`${hammersmith.className} text-base mt-2 md:mt-0 text-center text-secondary-darkred`}>
+              <div className={`${hammersmith.className} text-sm md:text-base text-center text-secondary-darkred`}>
                 <p>Suaramu adalah kunci kemajuan KMTETI, gunakan hak pilihmu</p>
               </div>
             </div>
@@ -81,8 +81,7 @@ export default function Home() {
 
       {/* Section 3 */}
       <div data-aos="fade-right" data-aos-duration="700" className="w-full flex flex-col justify-center items-center mt-12">
-        <CardView pad="p-8" className="sm:w-1/2 md:w-[80%] w-[85
-        %] text-justify" text={text.landingPage.section3.descText} />
+        <CardView pad="p-8" className="sm:w-1/2 md:w-[80%] w-[85%] text-justify" text={text.landingPage.section3.descText} />
         <Link href="/about"><button className={`${pixelgamer.className} text-secondary-darkred mt-4 p-4 bg-primary-dark mb-12 hover:bg-primary-light duration-300 transform hover:-translate-y-1 rounded-lg`}>About Us</button></Link>
       </div>
     </div>

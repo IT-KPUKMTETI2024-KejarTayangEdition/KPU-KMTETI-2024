@@ -1,6 +1,5 @@
 import React from 'react';
-import Suwun from '@/common/constant/thankyou/suwun';
-import Technocracy from '@/common/constant/thankyou/technocracy';
+import Technocracy from '@/common/constant/thankyou/Technocracy';
 import HomeButton from '@/common/constant/thankyou/HomeButton';
 
 function KPUThankYou() {

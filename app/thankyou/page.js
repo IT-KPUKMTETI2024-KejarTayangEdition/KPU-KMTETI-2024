@@ -1,21 +1,23 @@
 import React from 'react';
-import Suwun from '@/common/constant/thankyou/suwun';
-import Technocracy from '@/common/constant/thankyou/technocracy';
-import HomeButton from '@/common/constant/thankyou/HomeButton';
+import Image from "next/image";
+import Link from "next/link";
+import {eightbitwonder, pixelgamer} from "@/styles/font";
+import imgLogo from "@/common/constant/landing-page/logo-kpu.png";
 
-function KPUThankYou() {
+export default function KPUThankYou() {
   return (
-    <main className="flex flex-col rounded-none">
-      <section className="flex relative flex-col justify-center items-center px-20 py-48 w-full min-h-[1080px] max-md:px-5 max-md:py-24 max-md:max-w-full">
-        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/5b24566e8c105d63ba8cafb624f29a308c6d70e4c7ee85a36e82a4dc7c4bdb70?placeholderIfAbsent=true&apiKey=22e29311379644cabaabda6a2d09ec99" alt="" className="object-cover absolute inset-0 size-full" />
-        <div className="flex relative flex-col items-center mb-0 w-full max-w-[1500px] max-md:mb-2.5 max-md:max-w-full">
-          <Suwun />
-          <Technocracy />
-          <HomeButton />
+    <main className="my-12 mx-2 md:mx-24 p-2 border-2 border-primary-light rounded-lg">
+      <section className="border text-center border-primary-dark rounded-xl flex flex-col text-primary-light">
+        <h1 className={`${pixelgamer.className} mt-2 text-4xl`}>
+          TERIMA KASIH TELAH BERPARTISIPASI DALAM
+        </h1>
+        <h2 className={`${eightbitwonder.className} text-2xl text-primary-dark`}>KPU KMTETI 2024</h2>
+        <hr className="bg-primary-dark border-0 h-[0.5px] mt-2 mb-8 mx-6"/>
+        <div className="flex justify-center">
+          <Image alt="Tetrocracy Logo" src={imgLogo} width={550}/>
         </div>
+        <Link href="/" className="block mx-auto bg-primary-dark text-secondary-darkred w-fit rounded-md my-6 px-4 py-2">Kembali Ke Beranda</Link>
       </section>
     </main>
   );
 }
-
-export default KPUThankYou;

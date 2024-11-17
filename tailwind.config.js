@@ -1,5 +1,3 @@
-const { transform } = require('next/dist/build/swc');
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -28,7 +26,11 @@ module.exports = {
         "secondary-purple": "rgb(53 34 70)",
         "background-dark": "rgb(25 0 2)",
         "text-light": "rgb(252 252 252)",
-        "text-dark": "rgb(29 29 33)"
+        "text-dark": "rgb(29 29 33)",
+        "placeholder-blue": "rgb(35 62 81)",
+        "placeholder-skyblue": "rgb(42 161 224)",
+        "error-red": "rgb(150 0 9)",
+        "woodbrown": "rgb(101 49 17)",
       },
       keyframes: {
         "fly-lr": {

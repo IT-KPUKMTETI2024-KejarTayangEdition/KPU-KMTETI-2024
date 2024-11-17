@@ -1,6 +1,6 @@
 import React from "react";
-import ReportButton from "@/common/constant/laporkan/ReportButton";
-import Image from "next/image";
+import {dalekpinpoint} from "@/styles/font";
+import Link from "next/link";
 
 const reportTypes = [
   {
@@ -10,7 +10,7 @@ const reportTypes = [
   },
   {
     text: "Pelaporan Pembuatan Akun Medsos",
-    className: "",
+    className: "self-center",
     href: "https://bit.ly/PelaporanPembuatanAkunMedsosKPUKMTETI2024"
   },
   {
@@ -20,34 +20,35 @@ const reportTypes = [
   }
 ];
 
-function ReportingPage() {
+export default function ReportingPage() {
   return (
-    <main className="flex flex-col text-5xl rounded-none text-yellow-950 max-md:text-4xl">
-      <section className="flex relative flex-col justify-center items-center px-20 py-44 w-full min-h-[1060px] max-md:px-5 max-md:py-24 max-md:max-w-full max-md:text-4xl">
-        <Image
-          loading="lazy"
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/37cb4b8dc29c608dec92e7f2a23370486eccb00dfaa71856e5c8c0a391cf136a?placeholderIfAbsent=true&apiKey=22e29311379644cabaabda6a2d09ec99"
-          className="object-cover absolute inset-0 size-full"
-          alt="Background image for reporting page"
-        />
-        <div className="flex relative flex-col mb-0 ml-3.5 w-full max-w-[1535px] max-md:mb-2.5 max-md:max-w-full max-md:text-4xl">
-          <h1 className="self-center text-8xl font-bold text-orange-200 max-md:max-w-full max-md:text-4xl">
+    <main className="flex flex-col w-screen text-5xl rounded-none max-md:text-4xl">
+      <section className="flex relative flex-col justify-center items-center px-20 py-16 w-full">
+        <div className="flex justify-center relative ml-3.5 w-full mb-2.5">
+          <h1 className={`text-primary-light md:text-8xl font-bold text-4xl ${dalekpinpoint.className}`}>
             Ajukan Laporan
           </h1>
-          <div className="flex flex-col mt-20 max-md:mt-10">
-            {reportTypes.map((report, index) => (
-              <ReportButton
-                key={index}
-                text={report.text}
-                className={report.className}
-                href={report.href}
-              />
-            ))}
-          </div>
+        </div>
+        <div className="flex flex-col md:mt-20 mt-10 justify-center w-full items-center">
+          {reportTypes.map((report, index) => (
+            <ReportButton
+              key={index}
+              index={index}
+              text={report.text}
+              className={report.className}
+              href={report.href}
+            />
+          ))}
         </div>
       </section>
     </main>
   );
 }
 
-export default ReportingPage;
+function ReportButton({ text, className, href }) {
+  return (
+    <Link href={href} className={`md:px-16 md:py-5 md:mt-16 max-w-full text-center bg-primary-dark rounded-3xl border-4 border-woodbrown text-woodbrown w-[728px] px-5 mt-10 text-4xl ${className}`}>
+      {text}
+    </Link>
+  );
+}

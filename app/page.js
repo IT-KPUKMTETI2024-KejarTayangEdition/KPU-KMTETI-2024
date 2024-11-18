@@ -38,14 +38,14 @@ export default function Home() {
           <div data-aos="fade-left" data-aos-duration="500" className="p-4 rounded-2xl w-[80%] md:h-[40%] bg-gradient-to-b from-primary-light to-primary-dark">
             <div className="w-full h-full border border-secondary-darkred rounded-xl p-4">
               <div className={`${pixelgamer.className} flex flex-col md:flex-row items-center w-full md:h-1/2 justify-evenly`}>
-                <h1 className="text-4xl md:text-6xl text-primary-light" style={{"WebkitTextStroke": "5px #251205"}}>
+                <h1 className="text-4xl md:text-6xl text-primary-light tracking-tight text-stroke-black text-stroke-2 md:text-stroke-1" >
                   TETI
                 </h1>
                 <h1 className="text-lg lg:text-3xl text-secondary-darkred text-center md:text-left md:w-2/4">
                   ROAD TO A NEW CAPTAIN
                 </h1>
               </div>
-              <div className={`${hammersmith.className} text-sm md:text-base text-center text-secondary-darkred`}>
+              <div className={`${hammersmith.className} md:mt-8 text-sm md:text-lg text-center text-secondary-darkred`}>
                 <p>Suaramu adalah kunci kemajuan KMTETI, gunakan hak pilihmu</p>
               </div>
             </div>
@@ -60,7 +60,7 @@ export default function Home() {
       <section className="w-full min-h-screen flex flex-col">
         <Image alt="Pattern" src={imgTop} className="" style={preventImageDrag}/>
         <div className="bg-primary-light flex flex-col items-center justify-evenly w-full h-[100vh]">
-          <h1 data-aos="zoom-in" className={`${pixelgamer.className} text-4xl md:text-6xl text-secondary-darkred`}>
+          <h1 data-aos="zoom-in" className={`${pixelgamer.className} text-5xl md:text-6xl text-secondary-darkred`}>
             WHO'S NEXT ?
           </h1>
           <div className="flex w-full flex-row items-center justify-evenly">

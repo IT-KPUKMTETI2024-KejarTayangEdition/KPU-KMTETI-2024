@@ -19,7 +19,7 @@ export default function ReportingPage() {
   return (
     <main className="flex flex-col w-screen text-5xl rounded-none max-md:text-4xl">
       <section className="flex relative flex-col justify-center items-center px-20 py-16 w-full">
-        <div className="flex justify-center relative ml-3.5 w-full mb-2.5">
+        <div className="flex text-center md:justify-center relative ml-3.5 w-full mb-2.5">
           <h1 className={`text-primary-light md:text-8xl font-bold text-4xl ${dalekpinpoint.className}`}>
             Ajukan Laporan
           </h1>

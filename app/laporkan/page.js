@@ -4,18 +4,13 @@ import Link from "next/link";
 
 const reportTypes = [
   {
-    text: "Pelaporan Media Kampanye",
-    className: "self-start",
-    href: "https://bit.ly/PelaporanMediaKampanyeKPUKMTETI2024"
-  },
-  {
-    text: "Pelaporan Pembuatan Akun Medsos",
+    text: "Konfirmasi Pembuatan Akun Medsos",
     className: "self-center",
     href: "https://bit.ly/PelaporanPembuatanAkunMedsosKPUKMTETI2024"
   },
   {
     text: "Pengaduan Pelanggaran Kampanye",
-    className: "self-end",
+    className: "self-center",
     href: "http://bit.ly/PengaduanPelanggaranKampanye2024"
   }
 ];
@@ -29,7 +24,7 @@ export default function ReportingPage() {
             Ajukan Laporan
           </h1>
         </div>
-        <div className="flex flex-col md:mt-20 mt-10 justify-center w-full items-center">
+        <div className="flex flex-col md:mt-10 mt-10 justify-center w-full items-center">
           {reportTypes.map((report, index) => (
             <ReportButton
               key={index}

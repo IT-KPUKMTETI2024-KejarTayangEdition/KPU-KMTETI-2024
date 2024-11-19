@@ -30,3 +30,23 @@
   animation-timeline: view();
   animation-range: entry 0% cover 40%;
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #FDD6A6;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #251205;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #FDD6A6;
+}

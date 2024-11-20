@@ -60,11 +60,13 @@ export default function About() {
           <h1>{text.aboutPage.section4.title1}</h1>
           <h1>{text.aboutPage.section4.title2}</h1>
         </div> 
-        <Slider>
-          {path.map((p, k) => (
-            <Image alt="Photo" key={k} className="" src={p}/>
-          ))}
-        </Slider>
+        <div className="flex justify-center">
+          <Slider>
+            {path.map((p, k) => (
+              <Image alt="Photo" key={k} className="" src={p}/>
+            ))}
+          </Slider>
+        </div>
       </section>
       <Image alt="Pattern" className="mt-12 lg:mt-24" style={preventImageDrag}  src={imgPattern}/>
     </main>

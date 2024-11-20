@@ -62,7 +62,7 @@ export default function About() {
         </div> 
         <Slider>
           {path.map((p, k) => (
-            <Image alt="Photo" key={k} className="h-40 mobile-m:h-[11rem] mobile-l:h-64 md:h-80 lg:h-92" src={p}/>
+            <Image alt="Photo" key={k} className="" src={p}/>
           ))}
         </Slider>
       </section>

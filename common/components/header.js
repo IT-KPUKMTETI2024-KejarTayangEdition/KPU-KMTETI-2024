@@ -55,7 +55,7 @@ export function Header() {
             </button>
           )}
         </div>
-        <div className="md:hidden flex justify-end w-1/4">
+        {/* <div className="md:hidden flex justify-end w-1/4">
           <button onClick={() => setMenuOpen(!menuOpen)} className="z-30">
             <HamburgerButton className="text-white"/>
           </button>
@@ -74,7 +74,7 @@ export function Header() {
               </button>
             )}
           </div>
-        </div>
+        </div> */}
       </nav>
     </header>
   )

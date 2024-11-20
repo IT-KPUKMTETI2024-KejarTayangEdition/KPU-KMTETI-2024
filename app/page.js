@@ -26,53 +26,47 @@ export default function Home() {
 
   return (
     <main className="flex flex-col">
-      {/* Front section for landing page */}
-      <section className="flex flex-row w-full h-[90vh]">
-        <div className="hidden w-1/2 h-full md:flex justify-center items-center p-8">
-          <div className="relative flex items-center justify-center w-full h-1/2">
+      {/* Load */}
+      <section className="w-full h-[100vh] flex flex-row">
+        <div  className="hidden md:flex md:justify-center md:items-center w-1/2 ">
+          <div className="relative flex items-center justify-center w-[80%] h-full">
             <Image alt="Spinning wheel" data-aos="zoom-in" data-aos-duration="500" src={imgBackgroundLogo} width={350} className="absolute animate-spin-custom-speed"/>
             <Image alt="Tetrocracy Logo" data-aos="fade-right" data-aos-duration="500" src={imgLogo} width={450} className="absolute"/>
           </div>
         </div>
-        <div className="w-full md:w-1/2 h-full flex flex-col items-center justify-center">
-          <div data-aos="fade-left" data-aos-duration="500" className="p-4 rounded-2xl w-[80%] md:h-[40%] bg-gradient-to-b from-primary-light to-primary-dark">
-            <div className="w-full h-full border border-secondary-darkred rounded-xl p-4">
-              <div className={`${pixelgamer.className} flex flex-col md:flex-row items-center w-full md:h-1/2 justify-evenly`}>
-                <h1 className="text-4xl md:text-6xl text-primary-light tracking-tight text-stroke-black text-stroke-2 md:text-stroke-1" >
-                  TETI
-                </h1>
-                <h1 className="text-lg lg:text-3xl text-secondary-darkred text-center md:text-left md:w-2/4">
-                  ROAD TO A NEW CAPTAIN
-                </h1>
+        <div className="md:w-1/2 w-full h-full flex flex-col justify-center items-center">
+          {/* Image */}
+          <div data-aos="fade-down" data-aos-duration="700" className="w-64 lg:w-96 box-content bg-gradient-to-b p-4 lg:p-6 from-primary-light to-primary-dark rounded-xl">
+            <div className="flex flex-col justify-center w-full h-full border-2 rounded-md border-secondary-darkred">
+              <div className="flex w-full items-center pt-4 justify-center">
+                <h1 className={`${pixelgamer.className} text-5xl text-stroke-2 text-primary-light`}>TETI</h1>
+                <h1 className={`ml-1 ${pixelgamer.className} text-md w-28 box-content text-secondary-darkred`}>Road to a new Captain!</h1>
               </div>
-              <div className={`${hammersmith.className} md:mt-8 text-sm md:text-lg text-center text-secondary-darkred`}>
-                <p>Suaramu adalah kunci kemajuan KMTETI, gunakan hak pilihmu</p>
+              <div className="w-full flex">
+                <p className={`${hammersmith.className} text-secondary-darkred py-[4px] px-2 lg:px-4 lg:py-[6px] text-sm lg:text-lg w-full text-center`}>Suaramu adalah kunci kemajuan KMTETI, gunakan hak pilihmu</p>
               </div>
             </div>
           </div>
-          <Link href="/vote" className="mt-6 w-52 text-2xl text-center text-secondary-darkred border-y-2 border-y-primary-light bg-gradient-to-r from-transparent via-primary-dark to-transparent" data-aos="fade-left" data-aos-duration="700">
-            VOTE
-          </Link>
         </div>
       </section>
 
       {/* Candidates */}
-      <section className="w-full min-h-screen flex flex-col">
-        <Image alt="Pattern" src={imgTop} className="" style={preventImageDrag}/>
-        <div className="bg-primary-light flex flex-col items-center justify-evenly w-full h-[100vh]">
-          <h1 data-aos="zoom-in" className={`${pixelgamer.className} text-5xl md:text-6xl text-secondary-darkred`}>
+      <section className="w-full flex flex-col">
+      <Image alt="Pattern" src={imgTop} className="" style={preventImageDrag}/>
+        <div className="bg-primary-light flex flex-col items-center justify-evenly w-full box-content pt-8 pb-8">
+          <h1 data-aos="zoom-in" className={`${pixelgamer.className} mb-4 text-2xl md:text-5xl text-secondary-darkred`}>
             WHO'S NEXT ?
           </h1>
           <div className="flex w-full flex-row items-center justify-evenly">
             <div className="flex flex-col items-center">
-              <Image alt="First candidate" data-aos="fade-right" width={300} src={Kandidat1}/>
-              <Link href="/candidate" className={`border-2 border-secondary-darkred rounded-md text-secondary-darkred hover:bg-secondary-darkred hover:text-primary-light transform duration-500 hover:-translate-y-1 ${pixelgamer.className} py-2 px-6`}>
+              <Image className="" alt="First candidate" data-aos="zoom-in" width={300} src={Kandidat1}/>
+              <Link href="/candidate" className={`border-2 border-secondary-darkred rounded-md text-secondary-darkred hover:bg-secondary-darkred hover:text-primary-light transform duration-500 hover:-translate-y-1 ${pixelgamer.className} py-1 px-2 mt-4 text-xs sm:text-lg md:px-4 md:py-2`}>
                 Next
               </Link>
             </div>
             <div className="flex flex-col items-center">
-              <Image alt="Second candidate" data-aos="fade-left" width={300} src={Kandidat2}/>
-              <Link href="/candidate" className={`border-2 border-secondary-darkred rounded-md text-secondary-darkred hover:bg-secondary-darkred hover:text-primary-light transform duration-500 hover:-translate-y-1 ${pixelgamer.className} py-2 px-6`}>
+              <Image className="" alt="Second candidate" data-aos="zoom-in" width={300} src={Kandidat2}/>
+              <Link href="/candidate" className={`border-2 border-secondary-darkred rounded-md text-secondary-darkred hover:bg-secondary-darkred hover:text-primary-light transform duration-500 hover:-translate-y-1 ${pixelgamer.className} py-1 px-2 mt-4 text-xs sm:text-lg md:px-4 md:py-2`}>
                 Next
               </Link>
             </div>
@@ -83,8 +77,8 @@ export default function Home() {
 
       {/* Short Introduction Section */}
       <section data-aos="fade-right" data-aos-duration="700" className="w-full flex flex-col justify-center items-center mt-12">
-        <CardView pad="p-8" className="sm:w-1/2 md:w-[80%] w-[85%] text-justify" text={text.landingPage.section3.descText}/>
-        <Link href="/about" className={`${pixelgamer.className} text-secondary-darkred mt-4 p-4 bg-primary-dark mb-12 hover:bg-primary-light duration-300 transform hover:-translate-y-1 rounded-lg`}>
+        <CardView pad="p-4" className="sm:w-1/2 md:w-[80%] w-[85%] text-center text-xs md:text-sm" text={text.landingPage.section3.descText}/>
+        <Link href="/about" className={`${pixelgamer.className} text-secondary-darkred mt-4 bg-primary-dark mb-12 hover:bg-primary-light duration-300 transform hover:-translate-y-1 rounded-lg text-xs p-3 md:text-md md:p-4 lg:text-lg`}>
           About Us
         </Link>
       </section>

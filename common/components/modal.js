@@ -43,7 +43,7 @@ export default function Modal({open, onClose, srcImg, text}) {
       {/* Modal */}
       <div onClick={e => e.stopPropagation()} className={`bg-[#45423F] overflow-y-scroll w-full md:w-5/6 h-full md:h-2/3 shadow transition-all duration-300 ${open ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"}`}>
         {/* Button content */}
-        <div className="w-full mt-24 md:mt-0 flex justify-evenly items-center h-14 md:text-base text-xs">
+        <div className="w-full mt-0 md:mt-0 flex justify-evenly items-center h-14 md:text-base text-xs">
           <button className={`transition-all duration-300 ${pixelgamer.className} ${(info.profil) ? "text-primary-light" : "text-white"}`} onClick={() => setInfo({profil: true, cv: false, orasi: false, exit: false})}>
             Profil dan Visi Misi
           </button>

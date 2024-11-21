@@ -34,7 +34,7 @@ export function Header() {
   ];
 
   useEffect(() => {
-    setTimeout(() => {setTimeOutOpen(menuOpen)}, 250);
+    setTimeout(() => {setTimeOutOpen(menuOpen)}, 300);
   }, [menuOpen])
 
   return (

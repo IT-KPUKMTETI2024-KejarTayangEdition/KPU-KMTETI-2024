@@ -5,12 +5,12 @@ import Link from "next/link";
 const reportTypes = [
   {
     text: "Konfirmasi Pembuatan Akun Medsos",
-    className: "self-center",
+    className: "self-center text-xl md:text-4xl",
     href: "https://bit.ly/PelaporanPembuatanAkunMedsosKPUKMTETI2024"
   },
   {
     text: "Pengaduan Pelanggaran Kampanye",
-    className: "self-center",
+    className: "self-center text-xl md:text-4xl",
     href: "http://bit.ly/PengaduanPelanggaranKampanye2024"
   }
 ];

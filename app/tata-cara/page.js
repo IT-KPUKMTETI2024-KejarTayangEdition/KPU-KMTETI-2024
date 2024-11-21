@@ -6,7 +6,7 @@ const Page = () => {
         type="application/pdf"
         className="md:w-full sm:h-[85vh] md:max-w-[100%] max-w-100%"
       >
-        <p className="download-pdf">
+        <p className="download-pdf mb-28 mt-28">
           Unable to display PDF file. <a href="/tatacara.pdf" className="text-blue-500 underline">Download</a>{" "}
           instead.
         </p>

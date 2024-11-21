@@ -36,7 +36,7 @@ export default function Home() {
         </div>
         <div className="md:w-1/2 w-full h-full flex flex-col justify-center items-center">
           {/* Image */}
-          <div data-aos="fade-down" data-aos-duration="700" className="w-64 lg:w-96 box-content bg-gradient-to-b p-4 lg:p-6 from-primary-light to-primary-dark rounded-xl">
+          <div data-aos="fade-down" data-aos-duration="700" className="-mt-28 md:mt-0 w-64 lg:w-96 box-content bg-gradient-to-b p-4 lg:p-6 from-primary-light to-primary-dark rounded-xl">
             <div className="flex flex-col justify-center w-full h-full border-2 rounded-md border-secondary-darkred">
               <div className="flex w-full items-center pt-4 justify-center">
                 <h1 className={`${pixelgamer.className} text-5xl text-stroke-2 text-primary-light`}>TETI</h1>

@@ -63,7 +63,7 @@ export default function About() {
         <div className="flex justify-center">
           <Slider>
             {path.map((p, k) => (
-              <Image alt="Photo" key={k} className="" src={p}/>
+              <Image alt="Photo" key={k} className="" src={p} width={1000}/>
             ))}
           </Slider>
         </div>

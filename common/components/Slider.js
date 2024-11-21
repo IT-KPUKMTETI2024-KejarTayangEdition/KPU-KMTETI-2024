@@ -11,7 +11,7 @@ export default function Slider({children : slides}) {
     const next = () => setCurr(curr => (curr === slides.length - 1 ? 0 : curr + 1))
 
     return (
-        <div className="flex flex-row w-3/4">
+        <div className="flex flex-row w-[85%] md:w-[95%]">
             <button onClick={prev} className="mr-1 md:mr-4 lg:mr-6">
                 <LeftSliderButton className="w-3 md:w-6 lg:w-6" />
             </button>

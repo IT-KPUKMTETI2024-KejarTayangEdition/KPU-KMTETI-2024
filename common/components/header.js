@@ -38,7 +38,7 @@ export function Header() {
         <div className="lg:w-3/5 md:w-2/5 sm:1/6 flex w-3/4 justify-start items-center">
           {/* Logo Technocracy */}
           <Link href="/"><SimpleLogo className="sm:hidden"/></Link>
-          <Link href="/"><TetrocracyLogo className="sm:w-64 hidden sm:block sm:ml-12"/></Link>
+          <Link href="/"><TetrocracyLogo className="sm:w-64 hidden sm:block sm:ml-12 md:ml-6"/></Link>
         </div>
         <div className="lg:w-2/5 md:w-3/5 sm:w-5/6 hidden md:flex h-auto justify-evenly items-center">
           {/* Menu */}

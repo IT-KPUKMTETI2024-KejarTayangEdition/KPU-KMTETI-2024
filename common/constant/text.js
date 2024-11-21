@@ -46,12 +46,12 @@ export const text = {
     c1: {
       vm: `Visi: Mewujudkan KMTETI menjadi lingkungan dinamis dan inklusif yang menjadi wadah perkembangan skill profesional serta aplikatif.\n\nMisi:\n1. Membentuk lingkungan yang mendorong perpaduan antara keahlian profesional dan pengembangan keterampilan.\n2. Meningkatkan rasa kebersamaan, kepedulian, dan saling memiliki antar mahasiswa warga DTETI.\n3. Menjalin kerjasama dan membangun relasi dengan berbagai pihak, baik internal maupun eksternal.\n4. Membangun koordinasi yang aktif dan berkesinambungan secara transparan dengan seluruh masyarakat KMTETI.\n5. Mengoptimalkan minat, bakat, serta potensi yang dimiliki anggota KMTETI.`,
       cv: "https://drive.google.com/file/d/1EyQaUnKITEoMTibGqApkdjoQoxIn0ToG/view?usp=sharing",
-      orasi: "https://www.youtube.com/watch?v=dQw4w9WgXcQ", // Placeholder video
+      orasi: "https://youtu.be/CR8lyfnLzrA", // Placeholder video
     },
     c2: {
       vm: `Visi: Menjadikan KMTETI sebagai wadah yang inklusif, berdaya saing, dan berorientasi pada pengembangan diri serta profesionalisme, yang mampu merangkul dan memberikan manfaat nyata bagi seluruh mahasiswa TETI.\n\nMisi:\n1. Membangun rasa kekeluargaan dan inklusivitas melalui berbagai kegiatan yang dapat mempererat hubungan antar anggota, sehingga tercipta lingkungan yang harmonis.\n2. Menjadikan KMTETI sebagai rumah bagi seluruh mahasiswa TETI untuk berkreasi, berinovasi dan mengembangkan potensi diri.\n3. Membangun nilai profesionalisme untuk menciptakan KMTETI yang berkelanjutan.\n4. Menjalin kerjasama dengan berbagai pihak, baik internal maupun eksternal, untuk memperluas jaringan dan peluang pengembangan anggota.\n5. Membangun sinergi dengan berbagai pihak untuk meningkatkan visibilitas.`,
       cv: "https://drive.google.com/file/d/1Qe-HU5OG-QxxIaL6vl1CERAngxocluT6/view?usp=sharing",
-      orasi: "https://www.youtube.com/watch?v=dQw4w9WgXcQ", // Placeholder video
+      orasi: "https://youtu.be/Wm4jq4t_mBo", // Placeholder video
     },
   },
   tataCara: {

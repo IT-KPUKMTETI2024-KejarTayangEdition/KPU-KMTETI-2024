@@ -13,6 +13,7 @@ import {text} from "@/common/constant/text";
 
 import AOS from 'aos'
 import "aos/dist/aos.css";
+import LoadingPage from "@/common/components/loading-page";
 
 export default function Kandidat() {
   const [open1, setOpen1] = useState(false)

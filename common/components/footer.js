@@ -23,7 +23,7 @@ export function Footer() {
             <Link href="https://instagram.com/kpu.kmteti" target="_blank" rel="noreferrer noopener">
               <InstagramLogo className="hover:w-12 transform duration-300 w-10 mr-4"/>
             </Link>
-            <Link href="https://youtube.com/@kpukmteti23">
+            <Link href="https://www.youtube.com/@KPUKMTETI" target="_blank" rel="noreferrer noopener">
               <YouTubeLogo className="hover:w-12 transform duration-300 w-10 mr-4"/>
             </Link>
           </div>

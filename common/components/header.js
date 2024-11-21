@@ -3,7 +3,7 @@
 import Link from "next/link";
 import {usePathname} from "next/navigation";
 import Image from "next/image";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
 import {UserAuth} from "@/common/context/authentication";
 import {TetrocracyLogo, HamburgerButton, SimpleLogo} from "@/common/constant/images";
@@ -13,6 +13,7 @@ export function Header() {
   const {googleLogin, logout, user} = UserAuth();
   const path = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [timeOutOpen, setTimeOutOpen] = useState(false);
 
   async function handleSignIn() {
     try {
@@ -31,6 +32,10 @@ export function Header() {
     {href: "/candidate", name: "Kandidat"},
     {href: "/tata-cara", name: "Tata Cara"}
   ];
+
+  useEffect(() => {
+    setTimeout(() => {setTimeOutOpen(menuOpen)}, 250);
+  }, [menuOpen])
 
   return (
     <header className={`sticky top-0 bg-primary-light pb-3 tracking-wider ${pixelgamer.className} z-50`}>
@@ -55,25 +60,27 @@ export function Header() {
             </button>
           )}
         </div>
-        <div className="md:hidden flex justify-end w-1/4">
+        <div className="md:hidden flex justify-end w-1/4 overflow-x-hidden">
           <button onClick={() => setMenuOpen(!menuOpen)} className="z-30">
             <HamburgerButton className="text-white"/>
           </button>
-          <div className={`${menuOpen ? "animate-fly-in" : "transform translate-x-full duration-300 overflow-x-hidden"} flex flex-col gap-y-12 pt-20 text-xl text-right px-5 absolute h-screen overflow-hidden left-0 sm:left-1/2 top-0 right-0 bg-secondary-purple`}>
-            <Link onClick={() => setMenuOpen(false)} href="/" className={`${path === "/" ? "text-primary-light" : ""} hover:-translate-y-1 transform duration-300`}>
-              Beranda
-            </Link>
-            {paths.map((p) => (
-              <Link key={p.name} onClick={() => setMenuOpen(false)} href={p.href} className={`${path.includes(p.href) ? "text-primary-light" : ""} hover:-translate-y-1 transform duration-300`}>
-                {p.name}
+          {timeOutOpen && (
+            <div className={`${menuOpen ? "animate-fly-in" : "transform translate-x-full duration-300 overflow-x-hidden"} flex flex-col gap-y-12 pt-20 text-xl text-right px-5 absolute h-screen overflow-hidden left-0 sm:left-1/2 top-0 right-0 bg-secondary-purple`}>
+              <Link onClick={() => setMenuOpen(false)} href="/" className={`${path === "/" ? "text-primary-light" : ""} hover:-translate-y-1 transform duration-300`}>
+                Beranda
               </Link>
-            ))}
-            {!user && (
-              <button className="block text-text-dark text-3xl bg-primary-dark px-2 py-1 w-3/4 h-16 mx-auto rounded-lg hover:bg-primary-light hover:scale-105 duration-200" onClick={handleSignIn}>
-                LOGIN
-              </button>
-            )}
-          </div>
+              {paths.map((p) => (
+                <Link key={p.name} onClick={() => setMenuOpen(false)} href={p.href} className={`${path.includes(p.href) ? "text-primary-light" : ""} hover:-translate-y-1 transform duration-300`}>
+                  {p.name}
+                </Link>
+              ))}
+              {!user && (
+                <button className="block text-text-dark text-3xl bg-primary-dark px-2 py-1 w-3/4 h-16 mx-auto rounded-lg hover:bg-primary-light hover:scale-105 duration-200" onClick={handleSignIn}>
+                  LOGIN
+                </button>
+              )}
+            </div>
+          )}
         </div>
       </nav>
     </header>

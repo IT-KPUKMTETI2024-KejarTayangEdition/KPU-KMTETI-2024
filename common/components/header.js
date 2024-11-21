@@ -65,7 +65,7 @@ export function Header() {
             <HamburgerButton className="text-white"/>
           </button>
           {timeOutOpen && (
-            <div className={`${menuOpen ? "animate-fly-in" : "transform translate-x-full duration-300 overflow-x-hidden"} flex flex-col gap-y-12 pt-20 text-xl text-right px-5 absolute h-screen overflow-hidden left-0 sm:left-1/2 top-0 right-0 bg-secondary-purple`}>
+            <div className={`${menuOpen ? "animate-fly-in" : "transform translate-x-full duration-300 overflow-x-hidden"} flex flex-col gap-y-12 pt-20 text-xl text-right px-5 absolute h-screen left-0 sm:left-1/2 top-0 right-0 bg-secondary-purple`}>
               <Link onClick={() => setMenuOpen(false)} href="/" className={`${path === "/" ? "text-primary-light" : ""} hover:-translate-y-1 transform duration-300`}>
                 Beranda
               </Link>

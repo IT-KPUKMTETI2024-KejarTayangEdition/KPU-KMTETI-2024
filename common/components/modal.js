@@ -10,17 +10,28 @@ function Information({srcImg, text, info}) {
 
   if (info.cv) {
     pages = <div className="w-[70%] flex flex-col items-center justify-center p-4 h-3/4 text-justify">
-      <h1>CV dapat dilihat melalui link dibawah ini </h1>
-      <button onClick={() => window.open(text.cv, "_blank")} className={`${pixelgamer.className} text-secondary-darkred mt-6 bg-primary-light hover:bg-primary-dark pt-2 pb-2 pl-6 pr-6 hover:-translate-y-2 transform duration-300 rounded-lg`}>
-        Lihat CV
-      </button>
+      <h1 className="text-2xl">CV</h1>
+        <div className="mt-6 w-full flex justify-center">
+            <iframe
+              src={`https://drive.google.com/file/d/${text.cv}/preview`}
+              width="100%"
+              height="500px"
+              frameBorder="0"
+              className="rounded-lg shadow-lg mt-2"
+            ></iframe>
+        </div>
     </div>
   } else if (info.orasi) {
     pages = <div className="w-[70%] flex flex-col items-center justify-center p-4 h-3/4 text-justify">
-      <h1>Video orasi dapat dilihat melalui link dibawah ini </h1>
-      <button onClick={() => window.open(text.orasi, "_blank")} className={`${pixelgamer.className} text-secondary-darkred mt-6 bg-primary-light hover:bg-primary-dark pt-2 pb-2 pl-6 pr-6 hover:-translate-y-2 transform duration-300 rounded-lg`}>
-        Lihat Orasi
-      </button>
+      <h1 className="text-2xl">Video orasi</h1>
+          <iframe
+            src={`https://www.youtube.com/embed/${text.orasi}`}
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className="rounded-lg shadow-lg w-[71vh] h-[40vh] aspect-w-16 aspect-h-9 mt-4"
+          ></iframe>
     </div>
   }
 

@@ -55,7 +55,7 @@ export default function Home() {
       <Image alt="Pattern" src={imgTop} className="" style={preventImageDrag}/>
         <div className="bg-primary-light flex flex-col items-center justify-evenly w-full box-content pt-8 pb-8">
           <h1 data-aos="zoom-in" className={`${pixelgamer.className} mb-4 text-2xl md:text-5xl text-secondary-darkred`}>
-            WHO'S NEXT ?
+            WHO&#39;S NEXT ?
           </h1>
           <div className="flex w-full flex-row items-center justify-evenly">
             <div className="flex flex-col items-center">

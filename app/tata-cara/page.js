@@ -1,10 +1,12 @@
+import "./content.css";
+
 const Page = () => {
   return (
-    <div className="panduan-wrapper">
+    <div className="md:panduan-wrapper">
       <object
         data="/tatacara.pdf"
         type="application/pdf"
-        className="md:w-full sm:h-[85vh] md:max-w-[100%] max-w-100%"
+        className="md:w-full h-[85vh] max-w-[100%]"
       >
         <p className="download-pdf text-center min-h-screen min-w-screen">
           Unable to display PDF file. <a href="/tatacara.pdf" className="text-blue-500 underline">Download</a>{" "}

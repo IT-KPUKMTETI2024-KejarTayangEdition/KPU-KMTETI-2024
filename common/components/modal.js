@@ -9,7 +9,7 @@ function Information({srcImg, text, info}) {
   </div>
 
   if (info.cv) {
-    pages = <div className="w-[70%] flex flex-col items-center justify-center p-4 h-3/4 text-justify">
+    pages = <div className="w-full md:w-[70%] flex flex-col items-center justify-center p-4 h-3/4 text-justify">
       <h1 className="text-2xl">CV</h1>
         <div className="mt-6 w-full flex justify-center">
             <iframe
@@ -17,20 +17,20 @@ function Information({srcImg, text, info}) {
               width="100%"
               height="500px"
               frameBorder="0"
-              className="rounded-lg shadow-lg mt-2"
+              className="rounded-lg shadow-lg mt-2 "
             ></iframe>
         </div>
     </div>
   } else if (info.orasi) {
     pages = <div className="w-[70%] flex flex-col items-center justify-center p-4 h-3/4 text-justify">
-      <h1 className="text-2xl">Video orasi</h1>
+      <h1 className="text-2xl">Video Orasi</h1>
           <iframe
             src={`https://www.youtube.com/embed/${text.orasi}`}
             title="YouTube video player"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
-            className="rounded-lg shadow-lg w-[71vh] h-[40vh] aspect-w-16 aspect-h-9 mt-4"
+            className="rounded-lg shadow-lg md:w-[71vh] md:h-[40vh] aspect-w-16 aspect-h-9 mt-4"
           ></iframe>
     </div>
   }

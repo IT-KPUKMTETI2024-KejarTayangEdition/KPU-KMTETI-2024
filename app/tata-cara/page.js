@@ -12,24 +12,16 @@ const Page = () => {
   }, []);
 
   return (
-    <div className="md:panduan-wrapper flex justify-center items-center">
-      {isPdfSupported ? (
-        <object
-          data="/tatacara.pdf"
-          type="application/pdf"
-          className="md:w-full md:h-[90vh] lg:max-w-[100%] min-h-screen h-[50vh] w-[50vh]"
-        >
-          <p className="download-pdf text-center min-h-screen min-w-screen">
-            Unable to display PDF file. <a href="/tatacara.pdf" className="text-blue-500 underline">Download</a>{" "}
-            instead.
-          </p>
-        </object>
-      ) : (
-        <p className="download-pdf text-center min-h-screen min-w-screen">
-          Unable to display PDF file. <a href="/tatacara.pdf" className="text-blue-500 underline">Download</a>{" "}
-          instead.
-        </p>
-      )}
+    <div className="w-full flex md:w-full flex-col items-center justify-center p-2 h-full text-justify">
+        <div className="mt-2 w-full flex justify-center">
+            <iframe
+              src={`https://drive.google.com/file/d/1V2mKpvd4_bQiNg4yXQdxRlen5q0uNaTl/preview`}
+              
+              height="1000px"
+              frameBorder="0"
+              className="rounded-lg shadow-lg mt-2 md:w-[60%] w-full justify-center"
+            ></iframe>
+        </div>
     </div>
   );
 };

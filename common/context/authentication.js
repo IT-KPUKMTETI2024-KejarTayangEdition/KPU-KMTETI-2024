@@ -1,6 +1,6 @@
 "use client";
 
-import {useContext, createContext, useState} from "react";
+import {useContext, createContext, useState, useEffect} from "react";
 import {signInWithPopup, signOut, onAuthStateChanged, GoogleAuthProvider} from "firebase/auth";
 import {auth, db, realtimeDb} from "@/common/libs/firebase";
 import {doc, getDoc, updateDoc} from "firebase/firestore";
@@ -15,6 +15,7 @@ import {
   DialogCancel, DialogAction,
 } from "@/common/components/dialog";
 import {useRouter} from "next/navigation";
+import isWebview from "@/common/libs/webview";
 
 export const AuthContext = createContext({});
 
@@ -31,6 +32,16 @@ export function AuthContextProvider({children}) {
 
   function googleLogin() {
     setDialogClass({});
+
+    if(isWebview(window.navigator.userAgent)) {
+      return setDialog({
+        type: "rejected",
+        message: "Due to Google's policy to disallow embedded webviews, please log in using a browser.",
+        title: "Embedded Webview Detected",
+        isVisible: true,
+      });
+    }
+
     if (!auth.currentUser) {
       const provider = new GoogleAuthProvider();
       return signInWithPopup(auth, provider).then((cred) => {
@@ -117,15 +128,19 @@ export function AuthContextProvider({children}) {
                 await updateDoc(doc(db, "data-mahasiswa-dteti", user.email.replace("@mail.ugm.ac.id", "")), {voted: true});
                 update(votedRef, voting);
                 logout();
+                router.push("/thankyou");
+                setDialog({
+                  type: "success",
+                  message: "Your vote has been successfully cast. Thank you for participating in the election!",
+                  isVisible: true,
+                });
               } catch(err) {
-                console.log(err);
+                setDialog({
+                  type: "error",
+                  message: `An error occured:\n${err.message}.\n\nTry to cast your vote again after some time.`,
+                  isVisible: true,
+                });
               }
-              router.push("/thankyou")
-              setDialog({
-                type: "success",
-                message: "Your vote has been successfully cast. Thank you for participating in the election!",
-                isVisible: true,
-              });
             }
           }
         })
@@ -149,7 +164,7 @@ export function AuthContextProvider({children}) {
             <DialogTitle className={`text-2xl ${dialogClass["title"]}`}>
                 {dialog.title ?? dialogTypes[dialog.type]}
             </DialogTitle>
-            <DialogDescription className={`text-lg ${dialogClass["description"]}`}>
+            <DialogDescription className={`text-lg whitespace-pre-line ${dialogClass["description"]}`}>
               {dialog.message}
             </DialogDescription>
           </DialogHeader>

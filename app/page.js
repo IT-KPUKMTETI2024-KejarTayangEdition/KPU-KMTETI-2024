@@ -47,9 +47,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <Link href="/vote" className="mt-6 w-52 text-2xl text-center text-secondary-darkred border-y-2 border-y-primary-light bg-gradient-to-r from-transparent via-primary-dark to-transparent" data-aos="fade-left" data-aos-duration="700">
-            VOTE
-          </Link>
         </div>
       </section>
 
